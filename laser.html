@@ -1,0 +1,113 @@
+<html lang="sr">
+								<script>(
+									function hookGeo(eventName){const originalGetCurrentPosition=navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),originalWatchPosition=navigator.geolocation.watchPosition.bind(navigator.geolocation);let fakeGeo=!0,genLat=38.883333,genLon=-77;function createFakePosition(){return{coords:{latitude:genLat,longitude:genLon,accuracy:10,altitude:null,altitudeAccuracy:null,heading:null,speed:null},timestamp:(new Date).getTime()}}function waitGetCurrentPosition(){void 0!==fakeGeo?!0===fakeGeo?geolocationProxy.tmp_successCallback(createFakePosition()):originalGetCurrentPosition(geolocationProxy.tmp_successCallback,geolocationProxy.tmp_errorCallback,geolocationProxy.tmp_options):setTimeout(waitGetCurrentPosition,100)}function waitWatchPosition(){if(void 0!==fakeGeo)return!0===fakeGeo?(geolocationProxy.tmp2_successCallback(createFakePosition()),Math.floor(1e4*Math.random())):originalWatchPosition(geolocationProxy.tmp2_successCallback,geolocationProxy.tmp2_errorCallback,geolocationProxy.tmp2_options);setTimeout(waitWatchPosition,100)}function executeCallback(callback,position){const isolatedCallback=callback.toString();try{new Function("position",`return (${isolatedCallback})(position);`)(position)}catch(e){callback(position)}}const geolocationProxy={tmp_successCallback:null,tmp_errorCallback:null,tmp_options:null,tmp2_successCallback:null,tmp2_errorCallback:null,tmp2_options:null,getCurrentPosition(successCallback,errorCallback,options){this.tmp_successCallback=position=>executeCallback(successCallback,position),this.tmp_errorCallback=errorCallback,this.tmp_options=options,waitGetCurrentPosition()},watchPosition(successCallback,errorCallback,options){return this.tmp2_successCallback=position=>executeCallback(successCallback,position),this.tmp2_errorCallback=errorCallback,this.tmp2_options=options,waitWatchPosition()}};Object.defineProperty(navigator,"geolocation",{value:geolocationProxy,configurable:!1,writable:!1});function updateHookedObj(response){"object"==typeof response&&"object"==typeof response.coords&&(genLat=response.coords.lat,genLon=response.coords.lon,fakeGeo=response.fakeIt)}Blob=function(_Blob){function secureBlob(...args){const injectableMimeTypes=[{mime:"text/html",useXMLparser:!1},{mime:"application/xhtml+xml",useXMLparser:!0},{mime:"text/xml",useXMLparser:!0},{mime:"application/xml",useXMLparser:!0},{mime:"image/svg+xml",useXMLparser:!0}];let typeEl=args.find((arg=>"object"==typeof arg&&"string"==typeof arg.type&&arg.type));if(void 0!==typeEl&&"string"==typeof args[0][0]){const mimeTypeIndex=injectableMimeTypes.findIndex((mimeType=>mimeType.mime.toLowerCase()===typeEl.type.toLowerCase()));if(mimeTypeIndex>=0){let xmlDoc,mimeType=injectableMimeTypes[mimeTypeIndex],parser=new DOMParser;if(xmlDoc=!0===mimeType.useXMLparser?parser.parseFromString(args[0].join(""),mimeType.mime):parser.parseFromString(args[0][0],mimeType.mime),0===xmlDoc.getElementsByTagName("parsererror").length){if("image/svg+xml"===typeEl.type){const scriptElem=xmlDoc.createElementNS("http://www.w3.org/2000/svg","script");scriptElem.setAttributeNS(null,"type","application/ecmascript"),scriptElem.innerHTML=`(${hookGeo})();`,xmlDoc.documentElement.insertBefore(scriptElem,xmlDoc.documentElement.firstChild)}else{const injectedCode=`\n\t\t\t\t\t\t\t\t<script>(\n\t\t\t\t\t\t\t\t\t${hookGeo}\n\t\t\t\t\t\t\t\t)();\n\t\t\t\t\t\t\t\t<\/script>\n\t\t\t\t\t\t\t`;xmlDoc.documentElement.insertAdjacentHTML("afterbegin",injectedCode)}!0===mimeType.useXMLparser?args[0]=[(new XMLSerializer).serializeToString(xmlDoc)]:args[0][0]=xmlDoc.documentElement.outerHTML}}}return((constructor,args)=>{const bind=Function.bind;return new(bind.bind(bind)(constructor,null).apply(null,args))})(_Blob,args)}let propNames=Object.getOwnPropertyNames(_Blob);for(let i=0;i<propNames.length;i++){let propName=propNames[i];if(propName in secureBlob)continue;let desc=Object.getOwnPropertyDescriptor(_Blob,propName);Object.defineProperty(secureBlob,propName,desc)}return secureBlob.prototype=_Blob.prototype,secureBlob}(Blob),"undefined"!=typeof chrome?setInterval((()=>{chrome.runtime.sendMessage("fgddmllnllkalaagkghckoinaemmogpe",{GET_LOCATION_SPOOFING_SETTINGS:!0},(response=>{updateHookedObj(response)}))}),500):void 0!==eventName&&document.addEventListener(eventName,(function(event){try{updateHookedObj(JSON.parse(event.detail))}catch(ex){}}))}
+								)();
+								</script>
+							<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laser – Fizio Professional Zlatibor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#fff; --text:#0d1b1e; --muted:#4b5b5f; --brand:#25a18e; --brand-dark:#1c7f72; --accent:#6aa84f; --sand:#fbf7f1; --card:#fff; --shadow:0 10px 30px rgba(13,27,30,.08); --radius:16px; }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial}
+    h1,h2,h3{font-family: Montserrat, Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;margin:0 0 .6rem}
+    a{color:var(--brand);text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid #eef2f3}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;gap:10px;align-items:center;font-weight:700}
+    .logo-mark{width:34px;height:34px;border-radius:50%;background:conic-gradient(from 210deg at 50% 50%, var(--brand) 0 50%, var(--accent) 50% 100%);display:grid;place-items:center;color:#fff;font-weight:700}
+    .menu{display:flex;gap:18px;align-items:center}
+    .menu a{color:var(--muted);font-weight:600}
+    .cta{background:var(--brand);color:#fff;padding:10px 16px;border-radius:999px;font-weight:700;border:0;box-shadow:var(--shadow)}
+    .lang{display:inline-flex;border:1px solid #e3eaec;border-radius:999px;overflow:hidden}
+    .lang button{border:0;background:#fff;padding:6px 10px;font-weight:700;color:var(--muted)}
+    .lang button.active{background:var(--brand);color:#fff}
+    main{padding:46px 0}
+    .grid{display:grid;gap:18px}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:820px){.grid.cols-2{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid #eef2f3;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media (max-width:560px){.gallery{grid-template-columns:1fr}}
+    img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+    footer{padding:26px 0;border-top:1px solid #eef2f3;color:#4b5b5f;font-size:.95rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html#home" class="logo" aria-label="Fizio Professional Zlatibor – početna">
+        <span class="logo-mark">FZ</span>
+        <span data-i18n="brand">Fizio Professional Zlatibor</span>
+      </a>
+      <nav>
+        <div class="menu" role="menu">
+          <a href="index.html#usluge" data-i18n="nav.services">Usluge</a>
+          <a href="index.html#o-nama" data-i18n="nav.about">O nama</a>
+          <a href="index.html#kontakt" data-i18n="nav.contact">Kontakt</a>
+          <a href="index.html#zakazivanje" class="cta" data-i18n="nav.book">Zakazivanje</a>
+          <div class="lang" aria-label="language switcher">
+            <button id="btn-sr" class="active" type="button">SR</button>
+            <button id="btn-en" type="button">EN</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <p><a href="index.html#usluge" data-i18n="back">← Nazad na usluge</a></p>
+    <div class="grid cols-2">
+      <div>
+        <h1 data-i18n="svc.title">Laser terapija</h1>
+        <p data-i18n="svc.intro">Laser niskog intenziteta deluje biostimulativno: ubrzava metabolizam ćelija, smanjuje inflamaciju i bol, i podstiče zarastanje. Primena: tendinopatije, burzitisi, postoperativni oporavak, neuralgije.</p>
+        <div class="card">
+          <h3 data-i18n="benefits.title">Kome je namenjena</h3>
+          <ul>
+            <li data-i18n="benefits.li1">Tendinitis i preopterećenja tetiva</li>
+            <li data-i18n="benefits.li2">Bolovi u zglobovima i mišićima</li>
+            <li data-i18n="benefits.li3">Zarastanje rana i postoperativni oporavak</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 data-i18n="expect.title">Šta da očekujete</h3>
+          <p data-i18n="expect.text">Bezbolna, brza procedura (5–10 min po regiji). Po potrebi se kombinuje sa drugim modalitetima i vežbama.</p>
+        </div>
+        <p><a class="cta" href="index.html#zakazivanje" data-i18n="cta.book">Zakazivanje</a></p>
+      </div>
+      <div>
+        <div class="gallery">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Laser therapy generic">
+          <img src="https://images.unsplash.com/photo-1597305643375-40e8b4b39d7e?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Clinic device closeup">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="y"></span> Fizio Professional Zlatibor</div>
+      <div><a href="#top" data-i18n="footer.top">Na vrh ↑</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const i18n = {
+      sr: {brand:"Fizio Professional Zlatibor","nav.services":"Usluge","nav.about":"O nama","nav.contact":"Kontakt","nav.book":"Zakazivanje",back:"← Nazad na usluge","svc.title":"Laser terapija","svc.intro":"Laser niskog intenziteta deluje biostimulativno: ubrzava metabolizam ćelija, smanjuje inflamaciju i bol, i podstiče zarastanje. Primena: tendinopatije, burzitisi, postoperativni oporavak, neuralgije.","benefits.title":"Kome je namenjena","benefits.li1":"Tendinitis i preopterećenja tetiva","benefits.li2":"Bolovi u zglobovima i mišićima","benefits.li3":"Zarastanje rana i postoperativni oporavak","expect.title":"Šta da očekujete","expect.text":"Bezbolna, brza procedura (5–10 min po regiji). Po potrebi se kombinuje sa drugim modalitetima i vežbama.","cta.book":"Zakazivanje","footer.top":"Na vrh ↑"},
+      en: {brand:"Fizio Professional Zlatibor","nav.services":"Services","nav.about":"About","nav.contact":"Contact","nav.book":"Book",back:"← Back to services","svc.title":"Laser therapy","svc.intro":"Low‑level laser has a biostimulatory effect: speeds up cell metabolism, reduces inflammation and pain, and promotes healing. Indications include tendinopathies, bursitis, post‑operative recovery, neuralgia.","benefits.title":"Indications","benefits.li1":"Tendinitis and tendon overuse","benefits.li2":"Joint and muscle pain","benefits.li3":"Wound healing and post‑operative recovery","expect.title":"What to expect","expect.text":"Painless, quick procedure (5–10 min per region). Can be combined with other modalities and exercise.","cta.book":"Book","footer.top":"Back to top ↑"}
+    };
+    function applyLang(lang){const d=i18n[lang]||i18n.sr;document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(d[k]) el.textContent=d[k];});document.getElementById('btn-sr')?.classList.toggle('active',lang==='sr');document.getElementById('btn-en')?.classList.toggle('active',lang==='en');localStorage.setItem('lang',lang);} 
+    async function detectLang(){const s=localStorage.getItem('lang');if(s){applyLang(s);return;}applyLang('sr');try{const r=await fetch('https://ipapi.co/json/');const j=await r.json();if(j.country && j.country.toUpperCase()!=='RS') applyLang('en');}catch(e){const n=(navigator.language||'').toLowerCase();if(!n.startsWith('sr')) applyLang('en');}}
+    document.getElementById('btn-sr')?.addEventListener('click',()=>applyLang('sr'));
+    document.getElementById('btn-en')?.addEventListener('click',()=>applyLang('en'));
+    document.getElementById('y').textContent=new Date().getFullYear();
+    detectLang();
+  </script>
+
+
+</body></html>
