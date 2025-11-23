@@ -1,1 +1,300 @@
-<!doctype html><html><head><meta charset='utf-8'><title>Fallback</title></head><body>Fallback</body></html>
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fizio Professional Zlatibor</title>
+  <meta name="description" content="Physiotherapy & rehabilitation in Zlatibor. SR/EN. Electrotherapy, magnetic therapy, TECAR, traction, laser, ultrasound, pressotherapy, acupuncture, massage, taping, cupping, kinesitherapy and pro services." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <meta property="og:title" content="Fizio Professional Zlatibor">
+  <meta property="og:description" content="Physiotherapy & rehabilitation in Zlatibor. SR/EN. Electrotherapy, magnetic therapy, TECAR, traction, laser, ultrasound, pressotherapy, acupuncture, massage, taping, cupping, kinesitherapy and pro services.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fizioprofessional.com/">
+  <meta property="og:image" content="assets/icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fizio Professional Zlatibor">
+  <meta name="twitter:description" content="Physiotherapy & rehabilitation in Zlatibor. SR/EN.">
+  <meta name="twitter:image" content="assets/icon-512.png">
+  <link rel="apple-touch-icon" href="assets/icon-180.png"/>
+  <link rel="icon" type="image/png" href="assets/icon-32.png"/>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html#home" class="logo" aria-label="Fizio Professional Zlatibor – home">
+        <img src="assets/logo.png" alt="Fizio Professional Zlatibor logo" />
+      </a>
+      <nav>
+        <button class="hamb" aria-label="Open menu" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
+        <div class="menu" role="menu">
+          <a href="index.html#services" data-i18n="nav.services">Usluge</a>
+          <a href="index.html#about" data-i18n="nav.about">O nama</a>
+          <a href="gallery.html" data-i18n="nav.gallery">Galerija</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Kontakt</a>
+          <a href="index.html#booking" class="cta" data-i18n="nav.book">Zakazivanje</a>
+          <div class="lang" aria-label="language switcher">
+            <button id="btn-sr" class="active" type="button">SR</button>
+            <button id="btn-en" type="button">EN</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="container hero-inner">
+      <div>
+        <span class="card" style="display:inline-block;padding:6px 10px;border-radius:999px;background:#e6faf6">Fizioterapija • Rehabilitacija • Zlatibor</span>
+        <h1 data-i18n="hero.title">Dobrodošli u Fizio Professional Zlatibor</h1>
+        <p data-i18n="hero.text">Smirena i stručna nega: savremene terapije za oporavak, smanjenje bola i bolju funkciju.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="cta" href="#services" data-i18n="cta.see">Pregled usluga</a>
+          <a class="cta" style="background:var(--accent)" href="#booking" data-i18n="cta.book">Zakazivanje</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <!-- Use an <img> so the logo always shows on GitHub Pages -->
+        <img src="assets/logo.png" alt="Fizio Professional Zlatibor logo">
+      </div>
+    </div>
+  </main>
+
+  <section id="services">
+    <div class="container">
+      <h2 data-i18n="services.title">Usluge</h2>
+      <p class="muted" data-i18n="services.lead">Kliknite na uslugu da pročitate detalje. Zamena fotografija je jednostavna: zamenite fajl u <code>images/cards/</code>.</p>
+      <div class="grid cols-3" style="margin-top:14px">
+        <article class="card">
+          <h3 data-i18n="svc.electrotherapy">Electrotherapy</h3>
+          <img class="thumb" src="images/cards/electrotherapy.jpg" alt="Electrotherapy thumbnail" loading="lazy"/>
+          <p class="muted" data-i18n="svcdesc.electrotherapy">Therapeutic currents (TENS, interferential, NMES) to relieve pain, reduce swelling and activate muscles with Intelect Combo/Neo and PhysioGo 400C.</p>
+          <p><a class="cta" href="electrotherapy.html" data-i18n="more">Saznaj više →</a></p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="svc.magnetic">Magnetic Therapy</h3>
+          <img class="thumb" src="images/cards/magnetic.jpg" alt="Magnetic Therapy thumbnail" loading="lazy"/>
+          <p class="muted" data-i18n="svcdesc.magnetic">Super-inductive magnetic stimulation (Mag REX 7.5T) for deep neuromodulation, pain relief and improved mobility—no direct skin contact.</p>
+          <p><a class="cta" href="magnetic.html" data-i18n="more">Saznaj više →</a></p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="svc.tecar">TECAR Therapy</h3>
+          <img class="thumb" src="images/cards/tecar.jpg" alt="TECAR Therapy thumbnail" loading="lazy"/>
+          <p class="muted" data-i18n="svcdesc.tecar">Capacitive–resistive RF (TECAR) increases microcirculation and metabolism to speed recovery of muscles, tendons and joints.</p>
+          <p><a class="cta" href="tecar.html" data-i18n="more">Saznaj više →</a></p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="svc.traction">Traction Therapy</h3>
+          <img class="thumb" src="images/cards/traction.jpg" alt="Traction Therapy thumbnail" loading="lazy"/>
+          <p class="muted" data-i18n="svcdesc.traction">Gentle cervical/lumbar spinal decompression to reduce nerve-root irritation and stiffness; parameters are individualized.</p>
+          <p><a class="cta" href="traction.html" data-i18n="more">Saznaj više →</a></p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="svc.laser">Laser Therapy</h3>
+          <img class="thumb" src="images/cards/laser.jpg" alt="Laser Therapy thumbnail" loading="lazy"/>
+          <p class="muted" data-i18n="svcdesc.laser">Low-level laser therapy for biostimulation, edema reduction and analgesia using Intelect Neo/Combo and PhysioGo 400C.</p>
+          <p><a class="cta" href="laser.html" data-i18n="more">Saznaj više →</a></p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="svc.ultrasound">Ultrasound Therapy</h3>
+          <img class="thumb" src="images/cards/ultrasound.jpg" alt="Ultrasound Therapy thumbnail" loading="lazy"/>
+          <p class="muted" data-i18n="svcdesc.ultrasound">1/3 MHz therapeutic ultrasound for micromassage and thermal effects—supports soft-tissue healing and extensibility.</p>
+          <p><a class="cta" href="ultrasound.html" data-i18n="more">Saznaj više →</a></p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="svc.pressotherapy">Pressotherapy</h3>
+          <img class="thumb" src="images/cards/pressotherapy.jpg" alt="Pressotherapy thumbnail" loading="lazy"/>
+          <p class="muted" data-i18n="svcdesc.pressotherapy">Intermittent pneumatic compression to promote lymphatic/venous return—useful for swelling, recovery and heavy-leg symptoms.</p>
+          <p><a class="cta" href="pressotherapy.html" data-i18n="more">Saznaj više →</a></p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="svc.acupuncture">Acupuncture</h3>
+          <img class="thumb" src="images/cards/acupuncture.jpg" alt="Acupuncture thumbnail" loading="lazy"/>
+          <p class="muted" data-i18n="svcdesc.acupuncture">Sterile single-use needles at segmental/meridian points to modulate pain pathways and autonomic balance.</p>
+          <p><a class="cta" href="acupuncture.html" data-i18n="more">Saznaj više →</a></p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="svc.massage">Professional Massage</h3>
+          <img class="thumb" src="images/cards/massage.jpg" alt="Professional Massage thumbnail" loading="lazy"/>
+          <p class="muted" data-i18n="svcdesc.massage">Relax, sports, anti-cellulite, therapeutic and maderotherapy—partial or full-body, pressure tailored to your goals.</p>
+          <p><a class="cta" href="massage.html" data-i18n="more">Saznaj više →</a></p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="svc.taping">Kinesio Taping</h3>
+          <img class="thumb" src="images/cards/taping.jpg" alt="Kinesio Taping thumbnail" loading="lazy"/>
+          <p class="muted" data-i18n="svcdesc.taping">Elastic tape supports movement and proprioception without limiting ROM; also aids edema control and postural cueing.</p>
+          <p><a class="cta" href="taping.html" data-i18n="more">Saznaj više →</a></p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="svc.cupping">Cupping</h3>
+          <img class="thumb" src="images/cards/cupping.jpg" alt="Cupping thumbnail" loading="lazy"/>
+          <p class="muted" data-i18n="svcdesc.cupping">Negative-pressure cups provide myofascial decompression to ease trigger-point irritability and improve tissue glide.</p>
+          <p><a class="cta" href="cupping.html" data-i18n="more">Saznaj više →</a></p>
+        </article>
+
+        <!-- Kinesitherapy appears here, after Cupping -->
+        <article class="card">
+          <h3 data-i18n="svc.kinesitherapy">Kinesitherapy</h3>
+          <img class="thumb" src="images/cards/kinesitherapy.jpg" alt="Kinesitherapy thumbnail" loading="lazy"/>
+          <p class="muted" data-i18n="svcdesc.kinesitherapy">Guided exercise therapy for strength, mobility and motor control with progressive loading—fully individualized.</p>
+          <p><a class="cta" href="kinesitherapy.html" data-i18n="more">Saznaj više →</a></p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="svc.pro-services">Professional Services</h3>
+          <img class="thumb" src="images/cards/pro-services.jpg" alt="Professional Services thumbnail" loading="lazy"/>
+          <p class="muted" data-i18n="svcdesc.pro-services">On-site physiotherapy for sports events: licensed staff, treatment stations and portable equipment tailored to your team.</p>
+          <p><a class="cta" href="pro-services.html" data-i18n="more">Saznaj više →</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container grid cols-2">
+      <div>
+        <h2 data-i18n="about.title">O nama</h2>
+        <p data-i18n="about.text">Prijatan ambijent Zlatibora, individualni planovi i oprema vodećih proizvođača. Naš cilj je siguran i trajan povratak funkciji i aktivnostima koje volite.</p>
+        <ul>
+          <li data-i18n="about.li1">✔ Personalizovani tretmani</li>
+          <li data-i18n="about.li2">✔ Dokazana oprema i protokoli</li>
+          <li data-i18n="about.li3">✔ Edukacija i prevencija povreda</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 data-i18n="about.hoursTitle">Radno vreme</h3>
+        <p data-i18n="about.hours">Pon–Pet 10–18h • Subota 10–14h</p>
+        <h3 data-i18n="about.locTitle">Lokacija</h3>
+        <p>Ulica Sportova 24B, 31315 Zlatibor</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container grid cols-2">
+      <div>
+        <h2 data-i18n="contact.title">Kontakt</h2>
+        <div class="card" style="overflow:hidden">
+          <iframe title="Mapa – Fizio Professional Zlatibor" src="https://www.google.com/maps?q=Fizio+Professional+Ulica+Sportova+Zlatibor&output=embed" style="border:0;width:100%;height:320px" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p>📍 Ulica Sportova 24B, 31315 Zlatibor • 📞 <a href="tel:+381659331733">+381 65 933 1 733</a> • ✉️ <a href="mailto:fiziozlatiborpro@gmail.com">fiziozlatiborpro@gmail.com</a> • 📷 <a href="https://instagram.com/fizio_professional" target="_blank" rel="noopener">@fizio_professional</a></p>
+      </div>
+      <div>
+        <h2 id="booking" data-i18n="form.title">Pošaljite upit / zakazivanje</h2>
+        <div class="card">
+          <p><strong data-i18n="email">E-pošta:</strong> <a href="mailto:fiziozlatiborpro@gmail.com">fiziozlatiborpro@gmail.com</a></p>
+          <p><strong data-i18n="phone">Telefon:</strong> <a href="tel:+381659331733">+381 65 933 1 733</a></p>
+          <p><strong>Instagram:</strong> <a href="https://instagram.com/fizio_professional" target="_blank" rel="noopener">@fizio_professional</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="y"></span> Fizio Professional Zlatibor</div>
+      <div><a href="#top" data-i18n="footer.top">Na vrh ↑</a></div>
+    </div>
+  </footer>
+
+  <!-- Language strings + default-by-IP logic lives in assets/i18n.js -->
+  <script>
+    window.DICT = {
+      sr: {
+        "nav.services":"Usluge","nav.about":"O nama","nav.gallery":"Galerija","nav.contact":"Kontakt","nav.book":"Zakazivanje",
+        "hero.title":"Dobrodošli u Fizio Professional Zlatibor",
+        "hero.text":"Smirena i stručna nega: savremene terapije za oporavak, smanjenje bola i bolju funkciju.",
+        "cta.see":"Pregled usluga","cta.book":"Zakazivanje",
+        "services.title":"Usluge",
+        "services.lead":"Kliknite na uslugu da pročitate detalje. Zamena fotografija je jednostavna: zamenite fajl u images/cards/.",
+        "about.title":"O nama","about.text":"Prijatan ambijent Zlatibora, individualni planovi i oprema vodećih proizvođača. Naš cilj je siguran i trajan povratak funkciji i aktivnostima koje volite.",
+        "about.li1":"✔ Personalizovani tretmani","about.li2":"✔ Dokazana oprema i protokoli","about.li3":"✔ Edukacija i prevencija povreda",
+        "about.hoursTitle":"Radno vreme","about.hours":"Pon–Pet 10–18h • Subota 10–14h","about.locTitle":"Lokacija",
+        "contact.title":"Kontakt","form.title":"Pošaljite upit / zakazivanje","email":"E-pošta","phone":"Telefon","footer.top":"Na vrh ↑",
+        "ph.image":"Placeholder slika","more":"Saznaj više →",
+        "svc.electrotherapy":"Elektroterapija",
+        "svc.magnetic":"Magnetna terapija",
+        "svc.tecar":"TECAR terapija",
+        "svc.traction":"Trakciona terapija",
+        "svc.laser":"Laser terapija",
+        "svc.ultrasound":"Ultrazvučna terapija",
+        "svc.pressotherapy":"Presoterapija",
+        "svc.acupuncture":"Akupunktura",
+        "svc.massage":"Profesionalna masaža",
+        "svc.taping":"Kinezio tejp",
+        "svc.cupping":"Vakuum terapija (cupping)",
+        "svc.kinesitherapy":"Kineziterapija",
+        "svc.pro-services":"Profesionalne usluge (sport)",
+
+        "svcdesc.electrotherapy":"Terapeutske struje (TENS, interferentne, NMES) za smanjenje bola i otoka i aktivaciju mišića uz Intelect Combo/Neo i PhysioGo 400C.",
+        "svcdesc.magnetic":"Super-induktivna magnetna stimulacija (Mag REX 7.5T) za dubinsku neuromodulaciju, olakšanje bola i bolju pokretljivost—bez kontakta sa kožom.",
+        "svcdesc.tecar":"Kapacitivno-rezistivna RF (TECAR) povećava mikrocirkulaciju i metabolizam i ubrzava oporavak mišića, tetiva i zglobova.",
+        "svcdesc.traction":"Nežna cervikalna/lumbalna dekompresija kičme za smanjenje iritacije nervnih korenova i ukočenosti; parametri su individualni.",
+        "svcdesc.laser":"Laser niskog intenziteta za biostimulaciju, smanjenje edema i analgeziju uz Intelect Neo/Combo i PhysioGo 400C.",
+        "svcdesc.ultrasound":"Terapijski ultrazvuk 1/3 MHz za mikromasažu i termičke efekte—podrška zarastanju mekih tkiva i elastičnosti.",
+        "svcdesc.pressotherapy":"Intermitentna pneumatska kompresija podstiče limfni i venski povrat—korisno kod otoka, oporavka i osećaja težine u nogama.",
+        "svcdesc.acupuncture":"Sterilne jednokratne igle u segmentalnim/meridijanskim tačkama modulišu puteve bola i autonomnu ravnotežu.",
+        "svcdesc.massage":"Relax, sportska, anticelulit, terapijska i maderoterapija—parcijalno ili celo telo, pritisak prema ciljevima.",
+        "svcdesc.taping":"Elastični tejp podržava pokret i propriocepciju bez ograničenja pokreta; pomaže i kontrolu otoka i posturalne korekcije.",
+        "svcdesc.cupping":"Vakuum čašice stvaraju miofascijalnu dekompresiju, smanjuju iritabilnost trigger tačaka i poboljšavaju klizanje tkiva.",
+        "svcdesc.kinesitherapy":"Vođena terapija vežbama za snagu, mobilnost i kontrolu pokreta uz progresivno opterećenje—potpuno individualizovano.",
+        "svcdesc.pro-services":"Terenska fizioterapija za sportske događaje: licencirano osoblje, tretmanske stanice i prenosiva oprema prilagođena timu."
+      },
+      en: {
+        "nav.services":"Services","nav.about":"About","nav.gallery":"Gallery","nav.contact":"Contact","nav.book":"Book",
+        "hero.title":"Welcome to Fizio Professional Zlatibor",
+        "hero.text":"Calming, expert care: modern therapies for recovery, pain relief and better function.",
+        "cta.see":"Browse services","cta.book":"Book",
+        "services.title":"Services",
+        "services.lead":"Click a service to read more. Replace any card photo by overwriting the file in images/cards/.",
+        "about.title":"About us","about.text":"A peaceful setting in Zlatibor, individualized plans and proven equipment. Our goal is a safe, lasting return to what you love.",
+        "about.li1":"✔ Personalized treatment","about.li2":"✔ Proven equipment & protocols","about.li3":"✔ Education and prevention",
+        "about.hoursTitle":"Working hours","about.hours":"Mon–Fri 10–18 • Sat 10–14","about.locTitle":"Location",
+        "contact.title":"Contact","form.title":"Send an inquiry / booking","email":"Email","phone":"Phone","footer.top":"Back to top ↑",
+        "ph.image":"Placeholder image","more":"Learn more →",
+        "svc.electrotherapy":"Electrotherapy",
+        "svc.magnetic":"Magnetic Therapy",
+        "svc.tecar":"TECAR Therapy",
+        "svc.traction":"Traction Therapy",
+        "svc.laser":"Laser Therapy",
+        "svc.ultrasound":"Ultrasound Therapy",
+        "svc.pressotherapy":"Pressotherapy",
+        "svc.acupuncture":"Acupuncture",
+        "svc.massage":"Professional Massage",
+        "svc.taping":"Kinesio Taping",
+        "svc.cupping":"Cupping",
+        "svc.kinesitherapy":"Kinesitherapy",
+        "svc.pro-services":"Professional Services",
+
+        "svcdesc.electrotherapy":"Therapeutic currents (TENS, interferential, NMES) to relieve pain, reduce swelling and activate muscles with Intelect Combo/Neo and PhysioGo 400C.",
+        "svcdesc.magnetic":"Super-inductive magnetic stimulation (Mag REX 7.5T) for deep neuromodulation, pain relief and improved mobility—no direct skin contact.",
+        "svcdesc.tecar":"Capacitive–resistive RF (TECAR) increases microcirculation and metabolism to speed recovery of muscles, tendons and joints.",
+        "svcdesc.traction":"Gentle cervical/lumbar spinal decompression to reduce nerve-root irritation and stiffness; parameters are individualized.",
+        "svcdesc.laser":"Low-level laser therapy for biostimulation, edema reduction and analgesia using Intelect Neo/Combo and PhysioGo 400C.",
+        "svcdesc.ultrasound":"1/3 MHz therapeutic ultrasound for micromassage and thermal effects—supports soft-tissue healing and extensibility.",
+        "svcdesc.pressotherapy":"Intermittent pneumatic compression to promote lymphatic/venous return—useful for swelling, recovery and heavy-leg symptoms.",
+        "svcdesc.acupuncture":"Sterile single-use needles at segmental/meridian points to modulate pain pathways and autonomic balance.",
+        "svcdesc.massage":"Relax, sports, anti-cellulite, therapeutic and maderotherapy—partial or full-body, pressure tailored to your goals.",
+        "svcdesc.taping":"Elastic tape supports movement and proprioception without limiting ROM; also aids edema control and postural cueing.",
+        "svcdesc.cupping":"Negative-pressure cups provide myofascial decompression to ease trigger-point irritability and improve tissue glide.",
+        "svcdesc.kinesitherapy":"Guided exercise therapy for strength, mobility and motor control with progressive loading—fully individualized.",
+        "svcdesc.pro-services":"On-site physiotherapy for sports events: licensed staff, treatment stations and portable equipment tailored to your team."
+      }
+    };
+  </script>
+  <script src="assets/i18n.js"></script>
+</body>
+</html>
+
