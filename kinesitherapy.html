@@ -1,5 +1,46 @@
-<!doctype html><html><head><meta charset='utf-8'><title>Kineziterapija</title><link rel='stylesheet' href='assets/style.css'></head><body>
-  <main class="container">
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kineziterapija – Fizio Professional Zlatibor</title>
+  <meta name="description" content="Kinesitherapy (exercise therapy) in Zlatibor — individualized strength, mobility and motor control programs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <meta property="og:title" content="Kinesitherapy — Fizio Professional Zlatibor">
+  <meta property="og:description" content="Guided exercise therapy tailored to your diagnosis, goals and activity level.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fizioprofessional.com/kinesitherapy.html">
+  <meta property="og:image" content="assets/icon-512.png">
+  <link rel="apple-touch-icon" href="assets/icon-180.png"/>
+  <link rel="icon" type="image/png" href="assets/icon-32.png"/>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html#home" class="logo" aria-label="Fizio Professional Zlatibor – home">
+        <img src="assets/logo.png" alt="Fizio Professional Zlatibor logo" />
+      </a>
+      <nav>
+        <button class="hamb" aria-label="Open menu" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
+        <div class="menu" role="menu">
+          <a href="index.html#services" data-i18n="nav.services">Usluge</a>
+          <a href="index.html#about" data-i18n="nav.about">O nama</a>
+          <a href="gallery.html" data-i18n="nav.gallery">Galerija</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Kontakt</a>
+          <a href="index.html#booking" class="cta" data-i18n="nav.book">Zakazivanje</a>
+          <div class="lang" aria-label="language switcher">
+            <button id="btn-sr" class="active" type="button">SR</button>
+            <button id="btn-en" type="button">EN</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:40px">
     <p><a href="index.html#services" data-i18n="back">← Nazad na usluge</a></p>
     <div class="grid cols-2">
       <div>
@@ -31,22 +72,32 @@
     </div>
   </main>
 
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="y"></span> Fizio Professional Zlatibor</div>
+      <div><a href="#top" data-i18n="footer.top">Na vrh ↑</a></div>
+    </div>
+  </footer>
+
   <script>
     window.DICT = {
       sr: {
         "nav.services":"Usluge","nav.about":"O nama","nav.gallery":"Galerija","nav.contact":"Kontakt","nav.book":"Zakazivanje",
-        "back":"← Nazad na usluge","title":"Kineziterapija","intro":`Vođene vežbe snage, mobilnosti, stabilizacije i kontrole pokreta sa progresivnim opterećenjem. Program se individualno prilagođava dijagnozi, nivou aktivnosti i ciljevima (oporavak, prevencija povreda, ergonomski savet).`,"devices.title":"Uređaji: ",
+        "back":"← Nazad na usluge","title":"Kineziterapija","intro":"Vođene vežbe snage, mobilnosti, stabilizacije i kontrole pokreta sa progresivnim opterećenjem. Program se individualno prilagođava dijagnozi, nivou aktivnosti i ciljevima (oporavak, prevencija povreda, ergonomski savet).","devices.title":"Uređaji: ",
         "benefits.title":"Indikacije","benefits.li1":"Rehabilitacija nakon povreda i operacija","benefits.li2":"Hronični bol i posturalne disfunkcije","benefits.li3":"Povećanje snage, izdržljivosti i stabilnosti",
         "expect.title":"Šta da očekujete","expect.text":"Procena pokreta i izrada plana vežbi sa jasnim uputstvima; progresija opterećenja i praćenje rezultata.",
         "cta.book":"Zakazivanje","footer.top":"Na vrh ↑"
       },
       en: {
         "nav.services":"Services","nav.about":"About","nav.gallery":"Gallery","nav.contact":"Contact","nav.book":"Book",
-        "back":"← Back to services","title":"Kinesitherapy","intro":`Guided exercise therapy for strength, mobility, stabilization and motor control with progressive loading. We tailor the plan to your diagnosis, activity level and goals (recovery, injury prevention, ergonomic advice).`,"devices.title":"Devices: ",
+        "back":"← Back to services","title":"Kinesitherapy","intro":"Guided exercise therapy for strength, mobility, stabilization and motor control with progressive loading. We tailor the plan to your diagnosis, activity level and goals (recovery, injury prevention, ergonomic advice).","devices.title":"Devices: ",
         "benefits.title":"Indications","benefits.li1":"Post-injury and post-op rehab","benefits.li2":"Chronic pain and postural dysfunction","benefits.li3":"Increase strength, endurance and stability",
         "expect.title":"What to expect","expect.text":"Movement assessment and a clear exercise plan; progressive loading and outcome tracking.",
         "cta.book":"Book","footer.top":"Back to top ↑"
       }
     };
   </script>
-<script src='assets/i18n.js'></script></body></html>
+  <script src="assets/i18n.js"></script>
+</body>
+</html>
+
