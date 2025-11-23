@@ -20,7 +20,7 @@ header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdro
 .hero-inner{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:center}
 @media (max-width:860px){.hero-inner{grid-template-columns:1fr}}
 .hero-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;border:1px solid var(--border)}
-.hero-img{aspect-ratio:1/1;background:#fff url('assets/logo.png') center/contain no-repeat;border:1px solid var(--border);border-radius:14px}
+.hero-img{aspect-ratio:1/1;background:#fff url('logo.png') center/contain no-repeat;border:1px solid var(--border);border-radius:14px}
 section{padding:50px 0}
 .grid{display:grid;gap:18px}
 .grid.cols-3{grid-template-columns:repeat(3,1fr)}
