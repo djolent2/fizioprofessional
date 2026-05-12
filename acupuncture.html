@@ -3,23 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fizio Professional Zlatibor</title>
-  <meta name="description" content="Physiotherapy & rehabilitation in Zlatibor. SR/EN. Electrotherapy, magnetic therapy, TECAR, traction, laser, ultrasound, pressotherapy, acupuncture, massage, taping, cupping, kinesitherapy and pro services." />
+  <title>Akupunktura — bol, glavobolje i stres bez lekova | Fizio Professional Zlatibor</title>
+  <meta name="description" content="Akupunktura na Zlatiboru — sterilne, jednokratne igle, dry needling, trigger tačke i klasična akupunktura. Hronični bol, glavobolje, stres, nesanica. Fizio Professional." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <meta property="og:title" content="Fizio Professional Zlatibor">
-  <meta property="og:description" content="Physiotherapy & rehabilitation in Zlatibor. SR/EN. Electrotherapy, magnetic therapy, TECAR, traction, laser, ultrasound, pressotherapy, acupuncture, massage, taping, cupping, kinesitherapy and pro services.">
+  <meta property="og:title" content="Akupunktura — bol, glavobolje i stres bez lekova | Fizio Professional Zlatibor">
+  <meta property="og:description" content="Sterilne, jednokratne igle. Dry needling, trigger tačke i klasična akupunktura.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://fizioprofessional.com/">
+  <meta property="og:url" content="https://fizioprofessional.com/acupuncture.html">
   <meta property="og:image" content="assets/icon-512.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fizio Professional Zlatibor">
-  <meta name="twitter:description" content="Physiotherapy & rehabilitation in Zlatibor. SR/EN. Electrotherapy, magnetic therapy, TECAR, traction, laser, ultrasound, pressotherapy, acupuncture, massage, taping, cupping, kinesitherapy and pro services.">
+  <meta name="twitter:title" content="Akupunktura — bol, glavobolje i stres bez lekova">
+  <meta name="twitter:description" content="Sterilne, jednokratne igle. Dry needling, trigger tačke i klasična akupunktura.">
   <meta name="twitter:image" content="assets/icon-512.png">
   <link rel="apple-touch-icon" href="assets/icon-180.png"/>
   <link rel="icon" type="image/png" href="assets/icon-32.png"/>
+  <style>
+    .pt-photo{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow)}
+    .pt-lead{font-size:1.08rem;color:var(--text)}
+    .section-h2{margin-top:42px;margin-bottom:14px}
+    .indications-list{margin:8px 0 0;padding-left:1.1rem}
+    .indications-list li{margin:6px 0}
+    .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#e6faf6;color:var(--text);font-size:.85rem;font-weight:600;margin-bottom:8px}
+    .protocol-row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--border)}
+    .protocol-row:last-child{border-bottom:0}
+    .protocol-row dt{font-weight:600;color:var(--text)}
+    .protocol-row dd{margin:0;color:var(--muted);text-align:right}
+    .note-card{border-left:4px solid var(--accent)}
+    .cta-row{display:flex;justify-content:center;margin:36px 0 12px}
+  </style>
 </head>
 <body class="with-bg">
   <header>
@@ -43,33 +57,109 @@
       </nav>
     </div>
   </header>
+
   <main class="container">
     <p><a href="index.html#services" data-i18n="back">← Nazad na usluge</a></p>
-    <div class="grid cols-2">
+
+    <!-- Hero -->
+    <div class="grid cols-2" style="align-items:start">
       <div>
-        <h1 data-i18n="title">Akupunktura</h1>
-        <div class="card"><strong data-i18n="devices.title">Uređaji:</strong> —</div>
-        <p data-i18n="intro">Sterilne jednokratne igle u segmentalnim, trigger ili klasičnim meridijanskim tačkama utiču na puteve bola, autonomnu ravnotežu i lokalnu perfuziju.</p>
+        <span class="pill" data-i18n="hero.chip">Hronični bol • Glavobolje • Stres i nesanica</span>
+        <h1 data-i18n="title">Akupunktura — rešenje kada lekovi nisu dovoljni</h1>
+        <p class="pt-lead" data-i18n="lead">Bol u krstima koji se vraća, ukočen vrat od posla za kompjuterom, glavobolje koje znate napamet, nemir koji vas drži budnim do tri ujutru — ako ste već probali tablete, masaže i fizikalnu terapiju, a tegobe se i dalje vraćaju, akupunktura je pristup koji vredi razmotriti. Veoma tanke, sterilne iglice se postavljaju u pažljivo izabrane tačke na telu; telo na to reaguje smirivanjem mišića, popuštanjem napetosti i smanjenjem boli — bez lekova i bez perioda oporavka.</p>
         <div class="card">
-          <h3 data-i18n="benefits.title">Indikacije</h3>
-          <ul>
-            <li data-i18n="benefits.li1">Akutni i hronični bol</li>
-            <li data-i18n="benefits.li2">Poremećaji funkcije i pokretljivosti</li>
-            <li data-i18n="benefits.li3">Podrška regeneraciji tkiva</li>
-          </ul>
+          <strong data-i18n="devices.title">Pristup:</strong>
+          <span data-i18n="devices.body">Sterilne, jednokratne igle (medicinski standard), nule kontaminacije; pristup kombinuje savremenu medicinsku akupunkturu (dry needling, segmentalne i trigger tačke) sa klasičnim akupunkturnim tačkama. Kod određenih indikacija dodajemo i akupunkturu sa elektrostimulacijom (elektroakupunktura) — slab strujni impuls kroz iglu pojačava efekat.</span>
         </div>
-        <div class="card">
-          <h3 data-i18n="expect.title">Šta da očekujete</h3>
-          <p data-i18n="expect.text">Tretman je individualno dozirán; objašnjavamo senzacije i trajanje (obično 10–20 min po regiji).</p>
-        </div>
-        <p><a class="cta" href="index.html#booking" data-i18n="cta.book">Zakazivanje</a></p>
       </div>
       <div>
-        <div class="gallery">
-          <img src="images/acupuncture-1.jpg" alt="Acupuncture photo"/>
-          <img src="images/acupuncture-2.jpg" alt="Acupuncture device"/>
-        </div>
+        <img class="pt-photo" src="images/acupuncture-1.jpg" alt="Akupunktura — postavljanje iglica" loading="lazy"/>
       </div>
+    </div>
+
+    <!-- How it feels -->
+    <h2 class="section-h2" data-i18n="feel.title">Kako izgleda tretman</h2>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3 data-i18n="feel.h1">Kratak razgovor i pregled</h3>
+        <p class="muted" data-i18n="feel.t1">Pre prve sesije pričamo o vašim tegobama, lekovima koje pijete i ranijim nalazima — na osnovu toga biramo tačke i protokol baš za vas.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="feel.h2">Postavljanje iglica</h3>
+        <p class="muted" data-i18n="feel.t2">Ležite udobno, mi postavljamo veoma tanke iglice (mnogo tanje nego što zamišljate — često ih jedva osetite) u izabrane tačke. Kratak ubod, pa najčešće ništa ili blag osećaj topline ili težine („De Qi").</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="feel.h3">Vi se odmarate</h3>
+        <p class="muted" data-i18n="feel.t3">Iglice ostaju 20–30 minuta dok vi mirno ležite. Većina ljudi se opusti do te mere da zadrema. Posle vađenja iglica možete odmah da vozite i nastavite dan normalno.</p>
+      </div>
+    </div>
+
+    <!-- Indications -->
+    <h2 class="section-h2" data-i18n="ind.title">Najbolje indikacije</h2>
+    <p class="muted" data-i18n="ind.lead">Stanja kod kojih akupunktura najčešće donosi olakšanje — sama ili kao dopuna fizikalnoj terapiji i lekovima koje vam je preporučio lekar.</p>
+    <div class="grid cols-2" style="margin-top:14px">
+      <div class="card">
+        <h3 data-i18n="ind.pain.title">Bol i mišićna napetost</h3>
+        <ul class="indications-list">
+          <li data-i18n="ind.pain.li1">Hroničan bol u krstima koji se stalno vraća</li>
+          <li data-i18n="ind.pain.li2">Bol u vratu i ramenima, „ukočen vrat" od sedenja</li>
+          <li data-i18n="ind.pain.li3">Bol u kolenu (rana osteoartroza)</li>
+          <li data-i18n="ind.pain.li4">Teniski i golferski lakat (epikondilitis)</li>
+          <li data-i18n="ind.pain.li5">Bol iz trigger tačaka (čvorovi u mišiću) i tvrdokorni „čvorovi"</li>
+          <li data-i18n="ind.pain.li6">Išijas — bol koji se širi niz nogu (uz potvrdu lekara)</li>
+          <li data-i18n="ind.pain.li7">Bol u krstima u trudnoći (uz saglasnost ginekologa)</li>
+          <li data-i18n="ind.pain.li8">Rehabilitacija posle paralize lica (Bellova pareza)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 data-i18n="ind.other.title">Stres, glavobolje i ostalo</h3>
+        <ul class="indications-list">
+          <li data-i18n="ind.other.li1">Tenzione glavobolje (od napetosti i stresa)</li>
+          <li data-i18n="ind.other.li2">Migrene — preventivni kurs između napada</li>
+          <li data-i18n="ind.other.li3">Nesanica i otežano uspavljivanje</li>
+          <li data-i18n="ind.other.li4">Stres, anksioznost, unutrašnji nemir</li>
+          <li data-i18n="ind.other.li5">Bolni ili neuredni menstrualni ciklusi (dismenoreja)</li>
+          <li data-i18n="ind.other.li6">Valunzi i tegobe u perimenopauzi</li>
+          <li data-i18n="ind.other.li7">Mučnina (posle hemioterapije, u trudnoći — uz oprez)</li>
+          <li data-i18n="ind.other.li8">Tinitus (zujanje u uhu) — kod izabranih slučajeva</li>
+          <li data-i18n="ind.other.li9">Alergijski rinitis i sezonske alergije</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Protocol + photo -->
+    <div class="grid cols-2" style="margin-top:24px;align-items:start">
+      <div class="card">
+        <h3 data-i18n="proto.title">Koliko traje i kako se planira</h3>
+        <p class="muted" style="margin-top:0" data-i18n="proto.intro">Polazni okvir — sve podešavamo prema vašoj dijagnozi, toleranciji i tome kako reagujete na prve sesije.</p>
+        <dl style="margin:10px 0 0">
+          <div class="protocol-row"><dt data-i18n="proto.duration">Trajanje sesije</dt><dd data-i18n="proto.durationV">30–45 minuta (odmarate sa iglicama)</dd></div>
+          <div class="protocol-row"><dt data-i18n="proto.needles">Vreme sa iglicama</dt><dd data-i18n="proto.needlesV">~20–30 minuta</dd></div>
+          <div class="protocol-row"><dt data-i18n="proto.freq">Frekvencija</dt><dd data-i18n="proto.freqV">1–2 puta nedeljno</dd></div>
+          <div class="protocol-row"><dt data-i18n="proto.course">Tipičan kurs</dt><dd data-i18n="proto.courseV">6–10 sesija</dd></div>
+          <div class="protocol-row"><dt data-i18n="proto.review">Procena efekta</dt><dd data-i18n="proto.reviewV">na sredini kursa</dd></div>
+          <div class="protocol-row"><dt data-i18n="proto.electro">Elektroakupunktura</dt><dd data-i18n="proto.electroV">po potrebi, kod određenih indikacija</dd></div>
+        </dl>
+      </div>
+      <div>
+        <img class="pt-photo" src="images/acupuncture-2.jpg" alt="Akupunktura — detalj tretmana" loading="lazy"/>
+      </div>
+    </div>
+
+    <!-- What to expect + Not for you -->
+    <div class="grid cols-2" style="margin-top:24px">
+      <div class="card">
+        <h3 data-i18n="expect.title">Šta da očekujete</h3>
+        <p data-i18n="expect.text">Pre prve sesije sledi kratak razgovor o simptomima, lekovima i ranijim nalazima. Smestićete se udobno, najčešće ležeći. Iglice koje koristimo su izuzetno tanke — daleko tanje nego igle za injekcije — i većina ljudi pri ubodu oseti samo kratak „bockaj", a posle toga ništa ili blagu toplinu i osećaj težine oko tačke (to je tzv. „De Qi"). Iglice ostaju oko 20–30 minuta dok vi mirno ležite; kod nekih sesija dodajemo i elektroakupunkturu (slab strujni impuls kroz iglu). Većina ljudi se tokom i posle tretmana oseća prijatno opušteno, često pomalo pospano. Nema lekova, nema perioda oporavka — možete sami da odvezete kući. Olakšanje neki osete već posle 1–2 sesije, ali pravi efekat se gradi kroz ceo kurs.</p>
+      </div>
+      <div class="card note-card">
+        <h3 data-i18n="contra.title">Kada akupunktura nije za vas</h3>
+        <p data-i18n="contra.text">Molimo vas da nam unapred kažete ako: imate poremećaj zgrušavanja krvi, pijete antikoagulantnu terapiju (npr. varfarin ili novije antikoagulanse — to dogovaramo sa vašim lekarom), imate izraženu fobiju od igala, ste trudni (određene tačke izbegavamo — školovani smo za to), imate teško oslabljen imuni sistem, aktivnu infekciju ili oboljenje kože na mestu uboda, nestabilno srčano stanje ili ste pod uticajem alkohola/droga. Pre prve sesije postavljamo nekoliko kratkih pitanja — bezbednost je uvek na prvom mestu.</p>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a class="cta" href="index.html#booking" data-i18n="cta.book">Zakaži tretman akupunkture</a>
     </div>
   </main>
 
@@ -77,17 +167,105 @@
     window.DICT = {
       sr: {
         "nav.services":"Usluge","nav.about":"O nama","nav.gallery":"Galerija","nav.contact":"Kontakt","nav.book":"Zakazivanje",
-        "back":"← Nazad na usluge","title":"Akupunktura","intro":`Sterilne jednokratne igle u segmentalnim, trigger ili klasičnim meridijanskim tačkama utiču na puteve bola, autonomnu ravnotežu i lokalnu perfuziju.`,"devices.title":"Uređaji: ",
-        "benefits.title":"Indikacije","benefits.li1":"Akutni i hronični bol","benefits.li2":"Poremećaji funkcije i pokretljivosti","benefits.li3":"Podrška regeneraciji tkiva",
-        "expect.title":"Šta da očekujete","expect.text":"Tretman je individualno dozirán; objašnjavamo senzacije i trajanje (obično 10–20 min po regiji).",
-        "cta.book":"Zakazivanje","footer.top":"Na vrh ↑"
+        "back":"← Nazad na usluge",
+        "title":"Akupunktura — rešenje kada lekovi nisu dovoljni",
+        "hero.chip":"Hronični bol • Glavobolje • Stres i nesanica",
+        "lead":"Bol u krstima koji se vraća, ukočen vrat od posla za kompjuterom, glavobolje koje znate napamet, nemir koji vas drži budnim do tri ujutru — ako ste već probali tablete, masaže i fizikalnu terapiju, a tegobe se i dalje vraćaju, akupunktura je pristup koji vredi razmotriti. Veoma tanke, sterilne iglice se postavljaju u pažljivo izabrane tačke na telu; telo na to reaguje smirivanjem mišića, popuštanjem napetosti i smanjenjem boli — bez lekova i bez perioda oporavka.",
+        "devices.title":"Pristup: ",
+        "devices.body":"Sterilne, jednokratne igle (medicinski standard), nule kontaminacije; pristup kombinuje savremenu medicinsku akupunkturu (dry needling, segmentalne i trigger tačke) sa klasičnim akupunkturnim tačkama. Kod određenih indikacija dodajemo i akupunkturu sa elektrostimulacijom (elektroakupunktura) — slab strujni impuls kroz iglu pojačava efekat.",
+        "feel.title":"Kako izgleda tretman",
+        "feel.h1":"Kratak razgovor i pregled",
+        "feel.t1":"Pre prve sesije pričamo o vašim tegobama, lekovima koje pijete i ranijim nalazima — na osnovu toga biramo tačke i protokol baš za vas.",
+        "feel.h2":"Postavljanje iglica",
+        "feel.t2":"Ležite udobno, mi postavljamo veoma tanke iglice (mnogo tanje nego što zamišljate — često ih jedva osetite) u izabrane tačke. Kratak ubod, pa najčešće ništa ili blag osećaj topline ili težine („De Qi\").",
+        "feel.h3":"Vi se odmarate",
+        "feel.t3":"Iglice ostaju 20–30 minuta dok vi mirno ležite. Većina ljudi se opusti do te mere da zadrema. Posle vađenja iglica možete odmah da vozite i nastavite dan normalno.",
+        "ind.title":"Najbolje indikacije",
+        "ind.lead":"Stanja kod kojih akupunktura najčešće donosi olakšanje — sama ili kao dopuna fizikalnoj terapiji i lekovima koje vam je preporučio lekar.",
+        "ind.pain.title":"Bol i mišićna napetost",
+        "ind.pain.li1":"Hroničan bol u krstima koji se stalno vraća",
+        "ind.pain.li2":"Bol u vratu i ramenima, „ukočen vrat\" od sedenja",
+        "ind.pain.li3":"Bol u kolenu (rana osteoartroza)",
+        "ind.pain.li4":"Teniski i golferski lakat (epikondilitis)",
+        "ind.pain.li5":"Bol iz trigger tačaka (čvorovi u mišiću) i tvrdokorni „čvorovi\"",
+        "ind.pain.li6":"Išijas — bol koji se širi niz nogu (uz potvrdu lekara)",
+        "ind.pain.li7":"Bol u krstima u trudnoći (uz saglasnost ginekologa)",
+        "ind.pain.li8":"Rehabilitacija posle paralize lica (Bellova pareza)",
+        "ind.other.title":"Stres, glavobolje i ostalo",
+        "ind.other.li1":"Tenzione glavobolje (od napetosti i stresa)",
+        "ind.other.li2":"Migrene — preventivni kurs između napada",
+        "ind.other.li3":"Nesanica i otežano uspavljivanje",
+        "ind.other.li4":"Stres, anksioznost, unutrašnji nemir",
+        "ind.other.li5":"Bolni ili neuredni menstrualni ciklusi (dismenoreja)",
+        "ind.other.li6":"Valunzi i tegobe u perimenopauzi",
+        "ind.other.li7":"Mučnina (posle hemioterapije, u trudnoći — uz oprez)",
+        "ind.other.li8":"Tinitus (zujanje u uhu) — kod izabranih slučajeva",
+        "ind.other.li9":"Alergijski rinitis i sezonske alergije",
+        "proto.title":"Koliko traje i kako se planira",
+        "proto.intro":"Polazni okvir — sve podešavamo prema vašoj dijagnozi, toleranciji i tome kako reagujete na prve sesije.",
+        "proto.duration":"Trajanje sesije","proto.durationV":"30–45 minuta (odmarate sa iglicama)",
+        "proto.needles":"Vreme sa iglicama","proto.needlesV":"~20–30 minuta",
+        "proto.freq":"Frekvencija","proto.freqV":"1–2 puta nedeljno",
+        "proto.course":"Tipičan kurs","proto.courseV":"6–10 sesija",
+        "proto.review":"Procena efekta","proto.reviewV":"na sredini kursa",
+        "proto.electro":"Elektroakupunktura","proto.electroV":"po potrebi, kod određenih indikacija",
+        "expect.title":"Šta da očekujete",
+        "expect.text":"Pre prve sesije sledi kratak razgovor o simptomima, lekovima i ranijim nalazima. Smestićete se udobno, najčešće ležeći. Iglice koje koristimo su izuzetno tanke — daleko tanje nego igle za injekcije — i većina ljudi pri ubodu oseti samo kratak „bockaj\", a posle toga ništa ili blagu toplinu i osećaj težine oko tačke (to je tzv. „De Qi\"). Iglice ostaju oko 20–30 minuta dok vi mirno ležite; kod nekih sesija dodajemo i elektroakupunkturu (slab strujni impuls kroz iglu). Većina ljudi se tokom i posle tretmana oseća prijatno opušteno, često pomalo pospano. Nema lekova, nema perioda oporavka — možete sami da odvezete kući. Olakšanje neki osete već posle 1–2 sesije, ali pravi efekat se gradi kroz ceo kurs.",
+        "contra.title":"Kada akupunktura nije za vas",
+        "contra.text":"Molimo vas da nam unapred kažete ako: imate poremećaj zgrušavanja krvi, pijete antikoagulantnu terapiju (npr. varfarin ili novije antikoagulanse — to dogovaramo sa vašim lekarom), imate izraženu fobiju od igala, ste trudni (određene tačke izbegavamo — školovani smo za to), imate teško oslabljen imuni sistem, aktivnu infekciju ili oboljenje kože na mestu uboda, nestabilno srčano stanje ili ste pod uticajem alkohola/droga. Pre prve sesije postavljamo nekoliko kratkih pitanja — bezbednost je uvek na prvom mestu.",
+        "cta.book":"Zakaži tretman akupunkture",
+        "footer.top":"Na vrh ↑"
       },
       en: {
         "nav.services":"Services","nav.about":"About","nav.gallery":"Gallery","nav.contact":"Contact","nav.book":"Book",
-        "back":"← Back to services","title":"Acupuncture","intro":`Sterile single‑use needles placed at segmental, trigger‑point or classical meridian points to influence pain pathways, autonomic balance and local perfusion.`,"devices.title":"Devices: ",
-        "benefits.title":"Indications","benefits.li1":"Acute and chronic pain","benefits.li2":"Functional and mobility deficits","benefits.li3":"Support for tissue repair",
-        "expect.title":"What to expect","expect.text":"Your session is individually dosed; we explain sensations and timing (typically 10–20 min per region).",
-        "cta.book":"Book","footer.top":"Back to top ↑"
+        "back":"← Back to services",
+        "title":"Acupuncture — a path forward when medication isn't enough",
+        "hero.chip":"Chronic pain • Headaches • Stress and insomnia",
+        "lead":"Low back pain that keeps coming back, a stiff neck from desk work, headaches you know by heart, restlessness that keeps you awake until three in the morning — if you've already tried pills, massage and physiotherapy and the symptoms still return, acupuncture is an approach worth considering. Very thin, sterile needles are placed in carefully selected points on the body; the body responds by calming muscles, releasing tension and easing pain — without medication, without recovery time.",
+        "devices.title":"Approach: ",
+        "devices.body":"Sterile, single‑use needles (medical standard), zero contamination; the approach combines modern medical acupuncture (dry needling, segmental neural and trigger points) with classical acupuncture points along the meridians (traditional energy lines of the body). For selected indications we also use acupuncture with electrical stimulation (electroacupuncture) — a small pulse through the needle that enhances the effect.",
+        "feel.title":"What the session is like",
+        "feel.h1":"A short talk and assessment",
+        "feel.t1":"Before your first session we talk through your symptoms, medications and any earlier findings — and choose the points and protocol specifically for you.",
+        "feel.h2":"Placing the needles",
+        "feel.t2":"You lie down comfortably while we place very thin needles (much thinner than you'd imagine — often barely felt) in the selected points. A brief prick on insertion, then usually nothing or a mild warm or heavy feeling around the point („De Qi\").",
+        "feel.h3":"You just rest",
+        "feel.t3":"The needles stay in for 20–30 minutes while you rest quietly. Most people relax so completely they doze off. Once the needles come out you can drive yourself home and carry on with the day.",
+        "ind.title":"Best indications",
+        "ind.lead":"Conditions where acupuncture most often brings relief — on its own or alongside physiotherapy and any medication your doctor has prescribed.",
+        "ind.pain.title":"Pain and muscle tension",
+        "ind.pain.li1":"Chronic low back pain that keeps coming back",
+        "ind.pain.li2":"Neck and shoulder pain, a „stiff neck\" from sitting",
+        "ind.pain.li3":"Knee pain (early osteoarthritis)",
+        "ind.pain.li4":"Tennis and golfer's elbow (epicondylitis)",
+        "ind.pain.li5":"Pain from trigger points (knots in the muscle) and stubborn „knots\"",
+        "ind.pain.li6":"Sciatica — pain radiating down the leg (with medical confirmation)",
+        "ind.pain.li7":"Low back pain in pregnancy (with your OB's clearance)",
+        "ind.pain.li8":"Rehabilitation after facial paralysis (Bell's palsy)",
+        "ind.other.title":"Stress, headaches and the rest",
+        "ind.other.li1":"Tension‑type headaches (from tension and stress)",
+        "ind.other.li2":"Migraines — a preventative course between attacks",
+        "ind.other.li3":"Insomnia and trouble falling asleep",
+        "ind.other.li4":"Stress, anxiety, inner restlessness",
+        "ind.other.li5":"Painful or irregular menstrual cycles (dysmenorrhea)",
+        "ind.other.li6":"Hot flashes and perimenopausal symptoms",
+        "ind.other.li7":"Nausea (post‑chemotherapy, pregnancy — with care)",
+        "ind.other.li8":"Tinnitus (ringing in the ear) — in selected cases",
+        "ind.other.li9":"Allergic rhinitis and seasonal allergies",
+        "proto.title":"How long it takes and how we plan it",
+        "proto.intro":"A starting framework — everything is adjusted to your diagnosis, tolerance and how you respond to the first sessions.",
+        "proto.duration":"Session length","proto.durationV":"30–45 minutes (you rest with the needles in)",
+        "proto.needles":"Needles in for","proto.needlesV":"~20–30 minutes",
+        "proto.freq":"Frequency","proto.freqV":"1–2 times per week",
+        "proto.course":"Typical course","proto.courseV":"6–10 sessions",
+        "proto.review":"Mid‑course review","proto.reviewV":"around the halfway point",
+        "proto.electro":"Electroacupuncture","proto.electroV":"as needed, for selected indications",
+        "expect.title":"What to expect",
+        "expect.text":"Your first session begins with a short talk about your symptoms, medications and any earlier findings. You settle in comfortably, usually lying down. The needles we use are extremely thin — far thinner than injection needles — and most people feel only a brief „prick\" on insertion, followed by nothing or a mild warm, heavy feeling around the point (the so‑called „De Qi\"). Needles stay in for about 20–30 minutes while you rest quietly; in some sessions we add electroacupuncture (a small electrical pulse through the needle). Most people feel pleasantly relaxed during and after the session, often a little sleepy. No medication, no recovery time — you can drive yourself home. Some feel relief after just 1–2 sessions, but the real benefit builds up across the full course.",
+        "contra.title":"When acupuncture isn't for you",
+        "contra.text":"Please tell us ahead of time if you: have a bleeding disorder, are on anticoagulant therapy (e.g. warfarin or newer anticoagulants — we discuss this with your doctor first), have a strong fear of needles, are pregnant (we avoid specific points — we're trained for this), are severely immunocompromised, have an active infection or skin disease at the insertion area, have an unstable cardiac condition, or are under the influence of alcohol or drugs. Before your first session we ask a few short questions — safety always comes first.",
+        "cta.book":"Book an acupuncture session",
+        "footer.top":"Back to top ↑"
       }
     };
   </script>

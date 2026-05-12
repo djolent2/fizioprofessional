@@ -3,19 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kineziterapija – Fizio Professional Zlatibor</title>
-  <meta name="description" content="Kinesitherapy (exercise therapy) in Zlatibor — individualized strength, mobility and motor control programs." />
+  <title>Kineziterapija — vođene terapeutske vežbe | Fizio Professional Zlatibor</title>
+  <meta name="description" content="Kineziterapija na Zlatiboru — individualno vođene terapeutske vežbe za oporavak, snagu i prevenciju. Bez aparata, sa rekvizitima po potrebi. Fizio Professional." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <meta property="og:title" content="Kinesitherapy — Fizio Professional Zlatibor">
-  <meta property="og:description" content="Guided exercise therapy tailored to your diagnosis, goals and activity level.">
-  <meta property="og:type" content="article">
+  <meta property="og:title" content="Kineziterapija — vođene terapeutske vežbe | Fizio Professional Zlatibor">
+  <meta property="og:description" content="Individualno vođene terapeutske vežbe — oporavak posle operacije, jačanje, ravnoteža, prevencija povreda.">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://fizioprofessional.com/kinesitherapy.html">
   <meta property="og:image" content="assets/icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kineziterapija — vođene terapeutske vežbe">
+  <meta name="twitter:description" content="Individualno vođene terapeutske vežbe — oporavak, snaga, prevencija.">
+  <meta name="twitter:image" content="assets/icon-512.png">
   <link rel="apple-touch-icon" href="assets/icon-180.png"/>
   <link rel="icon" type="image/png" href="assets/icon-32.png"/>
+  <style>
+    .pt-photo{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow)}
+    .pt-lead{font-size:1.08rem;color:var(--text)}
+    .section-h2{margin-top:42px;margin-bottom:14px}
+    .indications-list{margin:8px 0 0;padding-left:1.1rem}
+    .indications-list li{margin:6px 0}
+    .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#e6faf6;color:var(--text);font-size:.85rem;font-weight:600;margin-bottom:8px}
+    .protocol-row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--border)}
+    .protocol-row:last-child{border-bottom:0}
+    .protocol-row dt{font-weight:600;color:var(--text)}
+    .protocol-row dd{margin:0;color:var(--muted);text-align:right}
+    .note-card{border-left:4px solid var(--accent)}
+    .cta-row{display:flex;justify-content:center;margin:36px 0 12px}
+  </style>
 </head>
 <body class="with-bg">
   <header>
@@ -40,37 +58,220 @@
     </div>
   </header>
 
-  <main class="container" style="padding-top:40px">
+  <main class="container">
     <p><a href="index.html#services" data-i18n="back">← Nazad na usluge</a></p>
-    <div class="grid cols-2">
+
+    <!-- Hero -->
+    <div class="grid cols-2" style="align-items:start">
       <div>
-        <h1 data-i18n="title">Kineziterapija</h1>
-        <div class="card"><strong data-i18n="devices.title">Uređaji:</strong> —</div>
-        <p data-i18n="intro">Vođene vežbe snage, mobilnosti, stabilizacije i kontrole pokreta sa progresivnim opterećenjem. Program se individualno prilagođava dijagnozi, nivou aktivnosti i ciljevima (oporavak, prevencija povreda, ergonomski savet).</p>
+        <span class="pill" data-i18n="hero.chip">Terapeutske vežbe • Oporavak • Snaga i prevencija</span>
+        <h1 data-i18n="title">Kineziterapija — vođene vežbe koje vraćaju pokret</h1>
+        <p class="pt-lead" data-i18n="lead">Kineziterapija je „lečenje pokretom" — individualno vođene vežbe sa terapeutom koji posmatra, ispravlja i postepeno podiže opterećenje. Nema aparata: samo vaše telo, par rekvizita po potrebi (elastične trake, lopte, ravnoteže, slobodni tegovi, ribstoli) i plan koji se menja iz nedelje u nedelju, prateći vaš napredak. Cilj nije „odraditi vežbe", nego vratiti pun, bezbolan pokret — i naučiti vas šta da radite sami, da biste rezultat zadržali.</p>
         <div class="card">
-          <h3 data-i18n="benefits.title">Indikacije</h3>
-          <ul>
-            <li data-i18n="benefits.li1">Rehabilitacija nakon povreda i operacija</li>
-            <li data-i18n="benefits.li2">Hronični bol i posturalne disfunkcije</li>
-            <li data-i18n="benefits.li3">Povećanje snage, izdržljivosti i stabilnosti</li>
-          </ul>
+          <strong data-i18n="devices.title">Pristup:</strong>
+          <span data-i18n="devices.body">Bez aparata — individualno vođen plan vežbi sa rekvizitima po potrebi (elastične trake, lopte, ravnoteže, slobodni tegovi, ribstoli). Plan se progresivno menja sa napretkom i preuzima se kući kao kratak rutinski set.</span>
         </div>
-        <div class="card">
-          <h3 data-i18n="expect.title">Šta da očekujete</h3>
-          <p data-i18n="expect.text">Procena pokreta i izrada plana vežbi sa jasnim uputstvima; progresija opterećenja i praćenje rezultata.</p>
-        </div>
-        <p><a class="cta" href="index.html#booking" data-i18n="cta.book">Zakazivanje</a></p>
       </div>
       <div>
-        <div class="gallery">
-          <img src="images/kinesitherapy-1.jpg" alt="Kinesitherapy photo 1"/>
-          <img src="images/kinesitherapy-2.jpg" alt="Kinesitherapy photo 2"/>
-          <img src="images/kinesitherapy-3.jpg" alt="Kinesitherapy photo 3"/>
-          <img src="images/kinesitherapy-4.jpg" alt="Kinesitherapy photo 4"/>
-        </div>
+        <img class="pt-photo" src="images/kinesitherapy-1.jpg" alt="Kineziterapija — vođena seansa vežbi" loading="lazy"/>
       </div>
     </div>
+
+    <!-- How a session looks -->
+    <h2 class="section-h2" data-i18n="feel.title">Kako izgleda seansa</h2>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3 data-i18n="feel.h1">Procena pokreta</h3>
+        <p class="muted" data-i18n="feel.t1">Prva seansa je razgovor i pregled — istorija tegoba, obim pokreta, snaga, ravnoteža, šta vas tačno provocira. Tu se određuje gde počinjemo i koji su realni ciljevi za naredne nedelje.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="feel.h2">Progresivni plan</h3>
+        <p class="muted" data-i18n="feel.t2">Vežbe počinju lagano i tehnički ispravno — terapeut posmatra, ispravlja, doseže pravu mišićnu grupu. Kako vam telo dozvoljava, raste obim, težina i složenost pokreta.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="feel.h3">Plan za kući</h3>
+        <p class="muted" data-i18n="feel.t3">Iz svake seanse odlazite sa kratkim setom za kuću — 10–20 minuta dnevno, sa jasnim uputstvima. Napredak se gradi između seansi, ne samo u sali.</p>
+      </div>
+    </div>
+
+    <!-- Who it's for -->
+    <h2 class="section-h2" data-i18n="ind.title">Za koga je kineziterapija</h2>
+    <p class="muted" data-i18n="ind.lead">Kineziterapija je „svestrana" — koristi i nekome ko se oporavlja posle ozbiljne operacije, i nekome ko hoće da se vrati trčanju bez da se opet povredi. Ako se prepoznajete ispod, plan radimo baš za vas.</p>
+    <div class="grid cols-2" style="margin-top:14px">
+      <div class="card">
+        <h3 data-i18n="ind.rehab.title">Rehabilitacija i bol</h3>
+        <ul class="indications-list">
+          <li data-i18n="ind.rehab.li1">Posle operacije kolena (LCA/ACL, meniskus, ugradnja proteze) — povratak hodu, stepenicama, sportu</li>
+          <li data-i18n="ind.rehab.li2">Posle operacije kuka ili ramena — vraćanje obima pokreta, snage i funkcije</li>
+          <li data-i18n="ind.rehab.li3">Posle preloma — kada skine se gips, a snaga je „nestala"</li>
+          <li data-i18n="ind.rehab.li4">Hroničan bol u krstima — jačanje jezgra (core) i glutealne muskulature</li>
+          <li data-i18n="ind.rehab.li5">Bol u vratu i „kancelarijsko držanje"</li>
+          <li data-i18n="ind.rehab.li6">Bol u kolenu (artroza) — jačanje koje odlaže ili izbegava operaciju</li>
+          <li data-i18n="ind.rehab.li7">„Smrznuto rame" (frozen shoulder) — progresivan obim pokreta i snaga</li>
+          <li data-i18n="ind.rehab.li8">Učestala uganuća skočnog zgloba — propriocepcija (osećaj položaja tela u prostoru) i ravnoteža</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 data-i18n="ind.prev.title">Snaga, prevencija i performance</h3>
+        <ul class="indications-list">
+          <li data-i18n="ind.prev.li1">Prevencija padova kod starijih — ravnoteža i samopouzdanje u hodu</li>
+          <li data-i18n="ind.prev.li2">Oporavak posle porođaja — karlično dno, jezgro (core) i držanje</li>
+          <li data-i18n="ind.prev.li3">Rehabilitacija dijastaze (razdvojeni pravi trbušni mišići)</li>
+          <li data-i18n="ind.prev.li4">Skoliotične disbalansne grupe mišića — jačanje slabije strane</li>
+          <li data-i18n="ind.prev.li5">Plan povratka trčanju posle povrede — postepeno, bez recidiva</li>
+          <li data-i18n="ind.prev.li6">Rekreativci i sportisti — sport-specifična priprema (presezona, off-sezona)</li>
+          <li data-i18n="ind.prev.li7">Sedeći radnici — bolji pokret, manje bola, neuromuskularna kontrola (kontrolisan rad nerva i mišića)</li>
+          <li data-i18n="ind.prev.li8">Adolescenti — rastovi bolovi, držanje, sportske „sitnice"</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Photo strip -->
+    <div class="grid cols-2" style="margin-top:24px">
+      <div><img class="pt-photo" src="images/kinesitherapy-2.jpg" alt="Kineziterapija — rad sa rekvizitima" loading="lazy"/></div>
+      <div><img class="pt-photo" src="images/kinesitherapy-3.jpg" alt="Kineziterapija — vežbe snage i ravnoteže" loading="lazy"/></div>
+    </div>
+
+    <!-- Protocol + photo -->
+    <div class="grid cols-2" style="margin-top:24px;align-items:start">
+      <div class="card">
+        <h3 data-i18n="proto.title">Koliko traje i kako se planira</h3>
+        <p class="muted" style="margin-top:0" data-i18n="proto.intro">Polazni okvir — sve podešavamo prema vašoj dijagnozi, fazi oporavka, ciljevima i tempu kojim napredujete.</p>
+        <dl style="margin:10px 0 0">
+          <div class="protocol-row"><dt data-i18n="proto.duration">Trajanje sesije</dt><dd data-i18n="proto.durationV">45–60 minuta</dd></div>
+          <div class="protocol-row"><dt data-i18n="proto.freq">Frekvencija</dt><dd data-i18n="proto.freqV">1–3 puta nedeljno (zavisno od faze)</dd></div>
+          <div class="protocol-row"><dt data-i18n="proto.course">Tipičan kurs</dt><dd data-i18n="proto.courseV">8–24 sesije (akutno → oporavak → povratak funkciji/sportu)</dd></div>
+          <div class="protocol-row"><dt data-i18n="proto.home">Vežbe za kući</dt><dd data-i18n="proto.homeV">10–20 minuta dnevno, prilagođeno opremi koju imate</dd></div>
+          <div class="protocol-row"><dt data-i18n="proto.review">Provera napretka</dt><dd data-i18n="proto.reviewV">na svakih 4–6 sesija</dd></div>
+          <div class="protocol-row"><dt data-i18n="proto.props">Rekviziti</dt><dd data-i18n="proto.propsV">trake, lopte, ravnoteže, slobodni tegovi, ribstoli</dd></div>
+        </dl>
+      </div>
+      <div>
+        <img class="pt-photo" src="images/kinesitherapy-4.jpg" alt="Kineziterapija — rad u sali" loading="lazy"/>
+      </div>
+    </div>
+
+    <!-- What to expect + When it's not enough -->
+    <div class="grid cols-2" style="margin-top:24px">
+      <div class="card">
+        <h3 data-i18n="expect.title">Šta da očekujete</h3>
+        <p data-i18n="expect.text">Prva seansa je detaljna procena — istorija, obim pokreta, snaga, ravnoteža i šta vas tačno boli. Prvih nekoliko susreta je nežno i „edukativno": učimo vas da vežbe radite tehnički ispravno, sa pravom mišićnom grupom. Kako se telo navikava, težina i složenost rastu. Blaga upala mišića sutradan je normalna; oštar bol nije i o tome odmah javljate. Ponesite udobnu sportsku odeću i čistu zatvorenu obuću za salu (ili čarape) i flašicu vode.</p>
+      </div>
+      <div class="card note-card">
+        <h3 data-i18n="contra.title">Kada kineziterapija nije sama dovoljna</h3>
+        <p data-i18n="contra.text">Kineziterapija nema klasične „zabrane" kao tretmani aparatima — uvek se nešto može vežbati. Postoje, međutim, situacije u kojima vežbe nisu prvi korak ili idu u paru sa drugom terapijom: akutno upaljen, otečen i topao zglob (prvo ga smirujemo, pa krećemo), nedijagnostikovan bol koji traži snimanje ili lekarsku evaluaciju, ozbiljnija srčana ili plućna oboljenja sa potrebnom dozvolom kardiologa/pulmologa, sveža fraktura (čekamo „zeleno svetlo" hirurga), ozbiljniji problemi sa ravnotežom bez nadzora kod kuće (plan tada radimo bezbedno za samostalni rad), kao i određene faze trudnoće (sarađujemo sa vašim ginekologom). Kratko pitamo i prilagođavamo — bezbednost prvo.</p>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a class="cta" href="index.html#booking" data-i18n="cta.book">Zakaži procenu i plan vežbi</a>
+    </div>
   </main>
+
+  <script>
+    window.DICT = {
+      sr: {
+        "nav.services":"Usluge","nav.about":"O nama","nav.gallery":"Galerija","nav.contact":"Kontakt","nav.book":"Zakazivanje",
+        "back":"← Nazad na usluge",
+        "title":"Kineziterapija — vođene vežbe koje vraćaju pokret",
+        "hero.chip":"Terapeutske vežbe • Oporavak • Snaga i prevencija",
+        "lead":"Kineziterapija je „lečenje pokretom\" — individualno vođene vežbe sa terapeutom koji posmatra, ispravlja i postepeno podiže opterećenje. Nema aparata: samo vaše telo, par rekvizita po potrebi (elastične trake, lopte, ravnoteže, slobodni tegovi, ribstoli) i plan koji se menja iz nedelje u nedelju, prateći vaš napredak. Cilj nije „odraditi vežbe\", nego vratiti pun, bezbolan pokret — i naučiti vas šta da radite sami, da biste rezultat zadržali.",
+        "devices.title":"Pristup: ",
+        "devices.body":"Bez aparata — individualno vođen plan vežbi sa rekvizitima po potrebi (elastične trake, lopte, ravnoteže, slobodni tegovi, ribstoli). Plan se progresivno menja sa napretkom i preuzima se kući kao kratak rutinski set.",
+        "feel.title":"Kako izgleda seansa",
+        "feel.h1":"Procena pokreta",
+        "feel.t1":"Prva seansa je razgovor i pregled — istorija tegoba, obim pokreta, snaga, ravnoteža, šta vas tačno provocira. Tu se određuje gde počinjemo i koji su realni ciljevi za naredne nedelje.",
+        "feel.h2":"Progresivni plan",
+        "feel.t2":"Vežbe počinju lagano i tehnički ispravno — terapeut posmatra, ispravlja, doseže pravu mišićnu grupu. Kako vam telo dozvoljava, raste obim, težina i složenost pokreta.",
+        "feel.h3":"Plan za kući",
+        "feel.t3":"Iz svake seanse odlazite sa kratkim setom za kuću — 10–20 minuta dnevno, sa jasnim uputstvima. Napredak se gradi između seansi, ne samo u sali.",
+        "ind.title":"Za koga je kineziterapija",
+        "ind.lead":"Kineziterapija je „svestrana\" — koristi i nekome ko se oporavlja posle ozbiljne operacije, i nekome ko hoće da se vrati trčanju bez da se opet povredi. Ako se prepoznajete ispod, plan radimo baš za vas.",
+        "ind.rehab.title":"Rehabilitacija i bol",
+        "ind.rehab.li1":"Posle operacije kolena (LCA/ACL, meniskus, ugradnja proteze) — povratak hodu, stepenicama, sportu",
+        "ind.rehab.li2":"Posle operacije kuka ili ramena — vraćanje obima pokreta, snage i funkcije",
+        "ind.rehab.li3":"Posle preloma — kada skine se gips, a snaga je „nestala\"",
+        "ind.rehab.li4":"Hroničan bol u krstima — jačanje jezgra (core) i glutealne muskulature",
+        "ind.rehab.li5":"Bol u vratu i „kancelarijsko držanje\"",
+        "ind.rehab.li6":"Bol u kolenu (artroza) — jačanje koje odlaže ili izbegava operaciju",
+        "ind.rehab.li7":"„Smrznuto rame\" (frozen shoulder) — progresivan obim pokreta i snaga",
+        "ind.rehab.li8":"Učestala uganuća skočnog zgloba — propriocepcija (osećaj položaja tela u prostoru) i ravnoteža",
+        "ind.prev.title":"Snaga, prevencija i performance",
+        "ind.prev.li1":"Prevencija padova kod starijih — ravnoteža i samopouzdanje u hodu",
+        "ind.prev.li2":"Oporavak posle porođaja — karlično dno, jezgro (core) i držanje",
+        "ind.prev.li3":"Rehabilitacija dijastaze (razdvojeni pravi trbušni mišići)",
+        "ind.prev.li4":"Skoliotične disbalansne grupe mišića — jačanje slabije strane",
+        "ind.prev.li5":"Plan povratka trčanju posle povrede — postepeno, bez recidiva",
+        "ind.prev.li6":"Rekreativci i sportisti — sport-specifična priprema (presezona, off-sezona)",
+        "ind.prev.li7":"Sedeći radnici — bolji pokret, manje bola, neuromuskularna kontrola (kontrolisan rad nerva i mišića)",
+        "ind.prev.li8":"Adolescenti — rastovi bolovi, držanje, sportske „sitnice\"",
+        "proto.title":"Koliko traje i kako se planira",
+        "proto.intro":"Polazni okvir — sve podešavamo prema vašoj dijagnozi, fazi oporavka, ciljevima i tempu kojim napredujete.",
+        "proto.duration":"Trajanje sesije","proto.durationV":"45–60 minuta",
+        "proto.freq":"Frekvencija","proto.freqV":"1–3 puta nedeljno (zavisno od faze)",
+        "proto.course":"Tipičan kurs","proto.courseV":"8–24 sesije (akutno → oporavak → povratak funkciji/sportu)",
+        "proto.home":"Vežbe za kući","proto.homeV":"10–20 minuta dnevno, prilagođeno opremi koju imate",
+        "proto.review":"Provera napretka","proto.reviewV":"na svakih 4–6 sesija",
+        "proto.props":"Rekviziti","proto.propsV":"trake, lopte, ravnoteže, slobodni tegovi, ribstoli",
+        "expect.title":"Šta da očekujete",
+        "expect.text":"Prva seansa je detaljna procena — istorija, obim pokreta, snaga, ravnoteža i šta vas tačno boli. Prvih nekoliko susreta je nežno i „edukativno\": učimo vas da vežbe radite tehnički ispravno, sa pravom mišićnom grupom. Kako se telo navikava, težina i složenost rastu. Blaga upala mišića sutradan je normalna; oštar bol nije i o tome odmah javljate. Ponesite udobnu sportsku odeću i čistu zatvorenu obuću za salu (ili čarape) i flašicu vode.",
+        "contra.title":"Kada kineziterapija nije sama dovoljna",
+        "contra.text":"Kineziterapija nema klasične „zabrane\" kao tretmani aparatima — uvek se nešto može vežbati. Postoje, međutim, situacije u kojima vežbe nisu prvi korak ili idu u paru sa drugom terapijom: akutno upaljen, otečen i topao zglob (prvo ga smirujemo, pa krećemo), nedijagnostikovan bol koji traži snimanje ili lekarsku evaluaciju, ozbiljnija srčana ili plućna oboljenja sa potrebnom dozvolom kardiologa/pulmologa, sveža fraktura (čekamo „zeleno svetlo\" hirurga), ozbiljniji problemi sa ravnotežom bez nadzora kod kuće (plan tada radimo bezbedno za samostalni rad), kao i određene faze trudnoće (sarađujemo sa vašim ginekologom). Kratko pitamo i prilagođavamo — bezbednost prvo.",
+        "cta.book":"Zakaži procenu i plan vežbi",
+        "footer.top":"Na vrh ↑"
+      },
+      en: {
+        "nav.services":"Services","nav.about":"About","nav.gallery":"Gallery","nav.contact":"Contact","nav.book":"Book",
+        "back":"← Back to services",
+        "title":"Kinesitherapy — guided exercise that brings movement back",
+        "hero.chip":"Therapeutic exercise • Recovery • Strength and prevention",
+        "lead":"Kinesitherapy is „treatment through movement\" — individually guided exercises with a therapist who watches, corrects and gradually raises the load. No machines: just your body, a few simple props when useful (resistance bands, balls, balance pads, free weights, wall bars) and a plan that changes week by week as you progress. The goal isn't to „get the exercises done\" — it's to bring back full, pain‑free movement and teach you what to do on your own so the result lasts.",
+        "devices.title":"Approach: ",
+        "devices.body":"No machines — an individually guided exercise plan with props when needed (resistance bands, balls, balance pads, free weights, wall bars). The plan progresses with you and goes home as a short daily routine.",
+        "feel.title":"What a session is like",
+        "feel.h1":"Movement assessment",
+        "feel.t1":"The first session is a conversation and a check‑up — history, range of motion, strength, balance and exactly what triggers your symptoms. That's where we set the starting point and the realistic goals for the weeks ahead.",
+        "feel.h2":"A progressive plan",
+        "feel.t2":"Exercises start light and technically clean — the therapist watches, corrects, makes sure the right muscle group is doing the work. As your body allows, the volume, load and complexity step up.",
+        "feel.h3":"A home plan",
+        "feel.t3":"You leave each session with a short routine for home — 10–20 minutes a day, with clear cues. Progress is built between sessions, not only in the gym.",
+        "ind.title":"Who kinesitherapy is for",
+        "ind.lead":"Kinesitherapy is „all‑purpose\" — it helps someone recovering from major surgery as much as someone who wants to return to running without getting hurt again. If you recognise yourself below, we build the plan around you.",
+        "ind.rehab.title":"Rehabilitation and pain",
+        "ind.rehab.li1":"After knee surgery (ACL, meniscus, total knee replacement) — return to walking, stairs, sport",
+        "ind.rehab.li2":"After hip or shoulder surgery — restoring range, strength and function",
+        "ind.rehab.li3":"After a fracture — when the cast comes off and the strength is „gone\"",
+        "ind.rehab.li4":"Chronic low back pain — core and gluteal strengthening",
+        "ind.rehab.li5":"Neck pain and „office posture\"",
+        "ind.rehab.li6":"Knee pain (osteoarthritis) — strengthening to delay or avoid surgery",
+        "ind.rehab.li7":"„Frozen shoulder\" — progressive range and strength",
+        "ind.rehab.li8":"Persistent ankle sprains — proprioception (sense of body position in space) and balance",
+        "ind.prev.title":"Strength, prevention and performance",
+        "ind.prev.li1":"Falls prevention in older adults — balance and confidence in walking",
+        "ind.prev.li2":"Post‑pregnancy recovery — pelvic floor, core and posture",
+        "ind.prev.li3":"Diastasis recti rehabilitation",
+        "ind.prev.li4":"Scoliosis‑related muscle imbalance — strengthening the weaker side",
+        "ind.prev.li5":"Return‑to‑running plan after injury — gradual, without setbacks",
+        "ind.prev.li6":"Recreational athletes and sportspeople — sport‑specific prep (preseason, off‑season)",
+        "ind.prev.li7":"Sedentary workers — better movement, less pain, neuromuscular control (controlled nerve‑and‑muscle work)",
+        "ind.prev.li8":"Adolescents — growing pains, posture, sport‑related niggles",
+        "proto.title":"How long it takes and how we plan it",
+        "proto.intro":"A starting framework — everything is tailored to your diagnosis, phase, goals and the pace at which you progress.",
+        "proto.duration":"Session length","proto.durationV":"45–60 minutes",
+        "proto.freq":"Frequency","proto.freqV":"1–3 times per week (depending on phase)",
+        "proto.course":"Typical course","proto.courseV":"8–24 sessions (acute → recovery → return to function/sport)",
+        "proto.home":"Home exercises","proto.homeV":"10–20 minutes daily, tailored to what equipment you have",
+        "proto.review":"Progress review","proto.reviewV":"every 4–6 sessions",
+        "proto.props":"Props","proto.propsV":"bands, balls, balance pads, free weights, wall bars",
+        "expect.title":"What to expect",
+        "expect.text":"The first session is a thorough assessment — history, range of motion, strength, balance and exactly what hurts. The first few sessions are gentle and „educational\": we teach you to perform the moves correctly, with the right muscle group doing the work. As your body adapts, load and complexity rise. Mild muscle soreness the next day is normal; sharp pain isn't, and you should tell us right away. Bring comfortable workout clothes, clean indoor shoes for the gym (or socks) and a water bottle.",
+        "contra.title":"When kinesitherapy isn't enough on its own",
+        "contra.text":"Kinesitherapy doesn't really have „bans\" the way machine‑based treatments do — there's almost always something we can train. There are, however, situations where exercise isn't the first step, or where it goes hand in hand with other care: an acutely hot, swollen, inflamed joint (we settle it first, then start), undiagnosed pain that needs imaging or a doctor's evaluation, serious heart or lung conditions that need a cardiologist's or pulmonologist's clearance, a very fresh fracture (we wait for the surgeon's green light), serious balance problems without supervision at home (we adapt the plan so it's safe alone), or certain phases of pregnancy (we work alongside your OB). We ask a few short questions and adapt — safety first.",
+        "cta.book":"Book an assessment and exercise plan",
+        "footer.top":"Back to top ↑"
+      }
+    };
+  </script>
 
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
@@ -78,26 +279,6 @@
       <div><a href="#top" data-i18n="footer.top">Na vrh ↑</a></div>
     </div>
   </footer>
-
-  <script>
-    window.DICT = {
-      sr: {
-        "nav.services":"Usluge","nav.about":"O nama","nav.gallery":"Galerija","nav.contact":"Kontakt","nav.book":"Zakazivanje",
-        "back":"← Nazad na usluge","title":"Kineziterapija","intro":"Vođene vežbe snage, mobilnosti, stabilizacije i kontrole pokreta sa progresivnim opterećenjem. Program se individualno prilagođava dijagnozi, nivou aktivnosti i ciljevima (oporavak, prevencija povreda, ergonomski savet).","devices.title":"Uređaji: ",
-        "benefits.title":"Indikacije","benefits.li1":"Rehabilitacija nakon povreda i operacija","benefits.li2":"Hronični bol i posturalne disfunkcije","benefits.li3":"Povećanje snage, izdržljivosti i stabilnosti",
-        "expect.title":"Šta da očekujete","expect.text":"Procena pokreta i izrada plana vežbi sa jasnim uputstvima; progresija opterećenja i praćenje rezultata.",
-        "cta.book":"Zakazivanje","footer.top":"Na vrh ↑"
-      },
-      en: {
-        "nav.services":"Services","nav.about":"About","nav.gallery":"Gallery","nav.contact":"Contact","nav.book":"Book",
-        "back":"← Back to services","title":"Kinesitherapy","intro":"Guided exercise therapy for strength, mobility, stabilization and motor control with progressive loading. We tailor the plan to your diagnosis, activity level and goals (recovery, injury prevention, ergonomic advice).","devices.title":"Devices: ",
-        "benefits.title":"Indications","benefits.li1":"Post-injury and post-op rehab","benefits.li2":"Chronic pain and postural dysfunction","benefits.li3":"Increase strength, endurance and stability",
-        "expect.title":"What to expect","expect.text":"Movement assessment and a clear exercise plan; progressive loading and outcome tracking.",
-        "cta.book":"Book","footer.top":"Back to top ↑"
-      }
-    };
-  </script>
   <script src="assets/i18n.js"></script>
 </body>
 </html>
-
