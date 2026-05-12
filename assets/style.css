@@ -35,10 +35,11 @@ section{padding:50px 0}
 footer{padding:26px 0;border-top:1px solid var(--border);color:#4b5b5f;font-size:.95rem}
 /* Branded photo backdrop, opt-in via <body class="with-bg">. Veiled so card-based content reads cleanly. */
 body.with-bg{background:transparent}
-body.with-bg::before{content:'';position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(252,253,252,.58) 0%,rgba(252,253,252,.78) 45%,rgba(252,253,252,.90) 100%),url('bg-hero.jpg') center 35%/cover no-repeat}
-@media (max-width:860px){body.with-bg::before{background:linear-gradient(180deg,rgba(252,253,252,.68),rgba(252,253,252,.88)),url('bg-hero-sm.jpg') center 30%/cover no-repeat}}
-body.with-bg .hero{background:linear-gradient(90deg,rgba(252,253,252,.78) 0%,rgba(252,253,252,.32) 45%,rgba(252,253,252,0) 65%)}
-body.with-bg .hero h1,body.with-bg .hero p{text-shadow:0 1px 2px rgba(255,255,255,.85)}
-/* On detail pages without a .hero, give the first <main> a small breathing wash */
-body.with-bg main:not(.hero){background:linear-gradient(180deg,rgba(252,253,252,.55) 0%,rgba(252,253,252,0) 80px)}
+body.with-bg::before{content:'';position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(252,253,252,.40) 0%,rgba(252,253,252,.66) 45%,rgba(252,253,252,.84) 100%),url('bg-hero.jpg') center 35%/cover no-repeat}
+@media (max-width:860px){body.with-bg::before{background:linear-gradient(180deg,rgba(252,253,252,.55),rgba(252,253,252,.82)),url('bg-hero-sm.jpg') center 30%/cover no-repeat}}
+body.with-bg .hero{background:linear-gradient(90deg,rgba(252,253,252,.84) 0%,rgba(252,253,252,.40) 45%,rgba(252,253,252,0) 65%)}
+body.with-bg .hero h1,body.with-bg .hero p{text-shadow:0 1px 2px rgba(255,255,255,.9)}
+/* On detail pages without a .hero, lay down a deeper top wash and protect body-level headings/intro text */
+body.with-bg main:not(.hero){background:linear-gradient(180deg,rgba(252,253,252,.80) 0%,rgba(252,253,252,.55) 140px,rgba(252,253,252,.20) 260px,rgba(252,253,252,0) 360px)}
+body.with-bg main:not(.hero) > h1,body.with-bg main:not(.hero) > p,body.with-bg main:not(.hero) > .grid > div > h1,body.with-bg main:not(.hero) > .grid > div > p{text-shadow:0 1px 2px rgba(255,255,255,.9),0 0 10px rgba(255,255,255,.55)}
 body.with-bg footer{background:transparent;border-top-color:rgba(231,239,240,.7)}
