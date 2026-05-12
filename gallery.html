@@ -3,23 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gallery — Fizio Professional Zlatibor</title>
-  <meta name="description" content="Photo gallery." />
+  <title>Galerija — Fizio Professional Zlatibor</title>
+  <meta name="description" content="Fotogalerija ordinacije Fizio Professional na Zlatiboru — prostor, oprema i tretmani." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <meta property="og:title" content="Gallery — Fizio Professional Zlatibor">
-  <meta property="og:description" content="Photo gallery.">
+  <meta property="og:title" content="Galerija — Fizio Professional Zlatibor">
+  <meta property="og:description" content="Fotogalerija ordinacije Fizio Professional na Zlatiboru.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fizioprofessional.com/gallery.html">
   <meta property="og:image" content="assets/icon-512.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Gallery — Fizio Professional Zlatibor">
-  <meta name="twitter:description" content="Photo gallery.">
+  <meta name="twitter:title" content="Galerija — Fizio Professional Zlatibor">
+  <meta name="twitter:description" content="Fotogalerija ordinacije Fizio Professional na Zlatiboru.">
   <meta name="twitter:image" content="assets/icon-512.png">
   <link rel="apple-touch-icon" href="assets/icon-180.png"/>
   <link rel="icon" type="image/png" href="assets/icon-32.png"/>
+  <style>
+    /* Masonry-style gallery using CSS multi-column layout (no JS). */
+    .masonry{column-count:1;column-gap:14px;margin-top:18px}
+    @media (min-width:560px){.masonry{column-count:2}}
+    @media (min-width:900px){.masonry{column-count:3}}
+    @media (min-width:1280px){.masonry{column-count:4}}
+    .masonry a{display:block;margin:0 0 14px;break-inside:avoid;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border);background:#fff;transition:transform .25s ease, box-shadow .25s ease}
+    .masonry a:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,.10)}
+    .masonry img{width:100%;height:auto;display:block}
+    .gallery-lead{color:var(--muted);max-width:62ch;margin:6px 0 0}
+  </style>
 </head>
 <body>
   <header>
@@ -44,19 +55,49 @@
     </div>
   </header>
 
-  <main class="container" style="padding-top:40px">
+  <main class="container" style="padding-top:30px;padding-bottom:30px">
     <h1 data-i18n="g.title">Galerija</h1>
-    <div class="gallery"><img style="width:100%;height:auto;border:1px solid var(--border);border-radius:12px;object-fit:cover" src="gallery/gallery-01.jpg" alt="Gallery image 1"/>
-<img style="width:100%;height:auto;border:1px solid var(--border);border-radius:12px;object-fit:cover" src="gallery/gallery-02.jpg" alt="Gallery image 2"/>
-<img style="width:100%;height:auto;border:1px solid var(--border);border-radius:12px;object-fit:cover" src="gallery/gallery-03.jpg" alt="Gallery image 3"/>
-<img style="width:100%;height:auto;border:1px solid var(--border);border-radius:12px;object-fit:cover" src="gallery/gallery-04.jpg" alt="Gallery image 4"/>
-<img style="width:100%;height:auto;border:1px solid var(--border);border-radius:12px;object-fit:cover" src="gallery/gallery-05.jpg" alt="Gallery image 5"/>
-<img style="width:100%;height:auto;border:1px solid var(--border);border-radius:12px;object-fit:cover" src="gallery/gallery-06.jpg" alt="Gallery image 6"/>
-<img style="width:100%;height:auto;border:1px solid var(--border);border-radius:12px;object-fit:cover" src="gallery/gallery-07.jpg" alt="Gallery image 7"/>
-<img style="width:100%;height:auto;border:1px solid var(--border);border-radius:12px;object-fit:cover" src="gallery/gallery-08.jpg" alt="Gallery image 8"/>
-</div>
+    <p class="gallery-lead" data-i18n="g.lead">Pogled na ordinaciju, opremu i tretmane.</p>
+    <div class="masonry">
+      <a href="gallery/gallery-01.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-01.jpg" alt="Fizio Professional Zlatibor — fotografija 1" loading="lazy"></a>
+      <a href="gallery/gallery-02.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-02.jpg" alt="Fizio Professional Zlatibor — fotografija 2" loading="lazy"></a>
+      <a href="gallery/gallery-03.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-03.jpg" alt="Fizio Professional Zlatibor — fotografija 3" loading="lazy"></a>
+      <a href="gallery/gallery-04.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-04.jpg" alt="Fizio Professional Zlatibor — fotografija 4" loading="lazy"></a>
+      <a href="gallery/gallery-05.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-05.jpg" alt="Fizio Professional Zlatibor — fotografija 5" loading="lazy"></a>
+      <a href="gallery/gallery-06.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-06.jpg" alt="Fizio Professional Zlatibor — fotografija 6" loading="lazy"></a>
+      <a href="gallery/gallery-07.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-07.jpg" alt="Fizio Professional Zlatibor — fotografija 7" loading="lazy"></a>
+      <a href="gallery/gallery-08.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-08.jpg" alt="Fizio Professional Zlatibor — fotografija 8" loading="lazy"></a>
+      <a href="gallery/gallery-09.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-09.jpg" alt="Fizio Professional Zlatibor — fotografija 9" loading="lazy"></a>
+      <a href="gallery/gallery-10.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-10.jpg" alt="Fizio Professional Zlatibor — fotografija 10" loading="lazy"></a>
+      <a href="gallery/gallery-11.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-11.jpg" alt="Fizio Professional Zlatibor — fotografija 11" loading="lazy"></a>
+      <a href="gallery/gallery-12.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-12.jpg" alt="Fizio Professional Zlatibor — fotografija 12" loading="lazy"></a>
+      <a href="gallery/gallery-13.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-13.jpg" alt="Fizio Professional Zlatibor — fotografija 13" loading="lazy"></a>
+      <a href="gallery/gallery-14.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-14.jpg" alt="Fizio Professional Zlatibor — fotografija 14" loading="lazy"></a>
+      <a href="gallery/gallery-15.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-15.jpg" alt="Fizio Professional Zlatibor — fotografija 15" loading="lazy"></a>
+      <a href="gallery/gallery-16.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-16.jpg" alt="Fizio Professional Zlatibor — fotografija 16" loading="lazy"></a>
+      <a href="gallery/gallery-17.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-17.jpg" alt="Fizio Professional Zlatibor — fotografija 17" loading="lazy"></a>
+      <a href="gallery/gallery-18.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-18.jpg" alt="Fizio Professional Zlatibor — fotografija 18" loading="lazy"></a>
+      <a href="gallery/gallery-19.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-19.jpg" alt="Fizio Professional Zlatibor — fotografija 19" loading="lazy"></a>
+      <a href="gallery/gallery-20.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-20.jpg" alt="Fizio Professional Zlatibor — fotografija 20" loading="lazy"></a>
+      <a href="gallery/gallery-21.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-21.jpg" alt="Fizio Professional Zlatibor — fotografija 21" loading="lazy"></a>
+      <a href="gallery/gallery-22.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-22.jpg" alt="Fizio Professional Zlatibor — fotografija 22" loading="lazy"></a>
+      <a href="gallery/gallery-23.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-23.jpg" alt="Fizio Professional Zlatibor — fotografija 23" loading="lazy"></a>
+      <a href="gallery/gallery-24.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-24.jpg" alt="Fizio Professional Zlatibor — fotografija 24" loading="lazy"></a>
+      <a href="gallery/gallery-25.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-25.jpg" alt="Fizio Professional Zlatibor — fotografija 25" loading="lazy"></a>
+      <a href="gallery/gallery-26.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-26.jpg" alt="Fizio Professional Zlatibor — fotografija 26" loading="lazy"></a>
+      <a href="gallery/gallery-27.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-27.jpg" alt="Fizio Professional Zlatibor — fotografija 27" loading="lazy"></a>
+      <a href="gallery/gallery-28.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-28.jpg" alt="Fizio Professional Zlatibor — fotografija 28" loading="lazy"></a>
+      <a href="gallery/gallery-29.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-29.jpg" alt="Fizio Professional Zlatibor — fotografija 29" loading="lazy"></a>
+      <a href="gallery/gallery-30.jpg" target="_blank" rel="noopener"><img src="gallery/gallery-30.jpg" alt="Fizio Professional Zlatibor — fotografija 30" loading="lazy"></a>
+    </div>
   </main>
-  <script>window.DICT={sr:{"nav.services":"Usluge","nav.about":"O nama","nav.gallery":"Galerija","nav.contact":"Kontakt","nav.book":"Zakazivanje","g.title":"Galerija","footer.top":"Na vrh ↑"},en:{"nav.services":"Services","nav.about":"About","nav.gallery":"Gallery","nav.contact":"Contact","nav.book":"Book","g.title":"Gallery","footer.top":"Back to top ↑"}};</script>
+
+  <script>
+    window.DICT = {
+      sr:{"nav.services":"Usluge","nav.about":"O nama","nav.gallery":"Galerija","nav.contact":"Kontakt","nav.book":"Zakazivanje","g.title":"Galerija","g.lead":"Pogled na ordinaciju, opremu i tretmane.","footer.top":"Na vrh ↑"},
+      en:{"nav.services":"Services","nav.about":"About","nav.gallery":"Gallery","nav.contact":"Contact","nav.book":"Book","g.title":"Gallery","g.lead":"A look inside the clinic — space, equipment and treatments.","footer.top":"Back to top ↑"}
+    };
+  </script>
 
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
