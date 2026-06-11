@@ -22,5 +22,12 @@
     document.getElementById('btn-sr')?.addEventListener('click',()=>applyLang('sr'));
     document.getElementById('btn-en')?.addEventListener('click',()=>applyLang('en'));
     detectLang(); const y=document.getElementById('y'); if(y) y.textContent=new Date().getFullYear();
+    // Mobile menu: keep aria-expanded in sync and close the overlay when a link is tapped
+    const menu=document.querySelector('.menu'), hamb=document.querySelector('.hamb');
+    if(menu&&hamb){
+      hamb.setAttribute('aria-expanded','false');
+      hamb.addEventListener('click',()=>hamb.setAttribute('aria-expanded',String(menu.classList.contains('open'))));
+      menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');hamb.setAttribute('aria-expanded','false');}));
+    }
   });
 })();
