@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MAG REX 7.5T — Fizio Professional Zlatibor (A4 flajer)</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Zilla+Slab:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  /* Design tokens lifted from the live site (assets/style.css) so the flyer reads as the same brand. */
+  :root{
+    --bg:#ffffff;--paper:#fcfdfc;--text:#133a3f;--muted:#5d6b70;
+    --brand:#29a190;--brand-deep:#15706a;--accent:#8ccd8a;
+    --border:#e7eff0;--chip:#e6faf6;--shadow:0 12px 28px rgba(0,0,0,.06);--radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#eef3f2;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+  /* Canvas is A4-proportioned (1000 × 1414 ≈ 210×297mm) so it fills one A4 page when printed. */
+  .flyer{width:1000px;height:1414px;margin:24px auto;background:var(--bg);color:var(--text);
+    position:relative;overflow:hidden;box-shadow:var(--shadow);
+    display:flex;flex-direction:column}
+  h1,h2,h3{font-family:Montserrat,Inter,system-ui,sans-serif}
+  svg{display:block}
+
+  /* ===== HERO ===== */
+  .hero{position:relative;height:642px;flex-shrink:0;background:linear-gradient(180deg,#eff9f7,#ffffff 60%)}
+  .hero-photo{position:absolute;top:62px;left:566px;width:382px;height:520px;object-fit:cover;
+    border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow)}
+  .hero-fade{position:absolute;top:0;right:430px;width:140px;height:642px;
+    background:linear-gradient(90deg,rgba(239,249,247,0) 0%,#eff9f7 92%);z-index:2}
+  .hero-inner{position:relative;z-index:3;width:560px;padding:30px 0 0 50px}
+  .brandrow{display:flex;align-items:center;gap:20px}
+  .logo{height:244px;width:auto;max-width:300px;object-fit:contain;display:block;margin-left:-6px;flex-shrink:0}
+  .brandtext{display:flex;flex-direction:column;gap:12px}
+  .tagline{font-size:16px;font-weight:700;line-height:1.4;letter-spacing:1.6px;color:#8aa0a0;text-transform:uppercase}
+  .eyebrow{font-size:17.5px;font-weight:700;line-height:1.35;letter-spacing:1px;color:var(--brand);text-transform:uppercase}
+  .hero h1{margin-top:20px;font-weight:800;font-size:43px;line-height:1.05;letter-spacing:-.5px;color:var(--text)}
+  .rule{width:84px;height:6px;border-radius:3px;background:var(--accent);margin-top:18px}
+  .hero p{margin-top:16px;font-size:18px;line-height:1.5;color:var(--muted);max-width:450px}
+  .hero p strong{color:var(--brand);font-weight:700}
+
+  /* ===== SECTION: KOME JE NAMENJEN ===== */
+  .who{padding:4px 50px 22px;display:flex;gap:30px;align-items:flex-start}
+  .who-col{flex:1}
+  .sec-label{font-weight:800;font-size:23px;letter-spacing:.5px;color:var(--brand);margin-bottom:14px}
+  .checklist{display:flex;flex-direction:column;gap:11px}
+  .check{display:flex;align-items:flex-start;gap:12px}
+  .check svg{width:24px;height:24px;color:var(--accent);flex-shrink:0;margin-top:1px}
+  .check div{font-size:18px;line-height:1.45;color:#4b5b5f}
+  .check strong{color:var(--text);font-weight:700}
+  .badge{flex-shrink:0;width:196px;height:196px;border-radius:50%;background:var(--chip);
+    border:2px solid #cdeadf;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:8px}
+  .badge svg{width:38px;height:38px;color:var(--brand);margin-bottom:10px}
+  .badge div{font-weight:800;font-size:16.5px;line-height:1.5;letter-spacing:.8px;color:var(--brand-deep);text-align:center;font-family:Montserrat,sans-serif}
+
+  /* ===== SECTION: ŠTA MOŽE ===== */
+  .can{padding:2px 44px 22px}
+  .can h2{text-align:center;font-weight:800;font-size:32px;letter-spacing:.5px;color:var(--text);margin-bottom:16px}
+  .can h2 span{color:var(--brand)}
+  .benefits{display:flex;background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 8px}
+  .benefit{flex:1;text-align:center;padding:0 7px;display:flex;flex-direction:column;align-items:center}
+  .benefit+.benefit{border-left:1px solid var(--border)}
+  .benefit svg{width:34px;height:34px;color:var(--brand)}
+  .benefit div{margin-top:10px;font-size:15px;font-weight:700;letter-spacing:.3px;line-height:1.35;color:#4b5b5f;font-family:Montserrat,sans-serif}
+
+  /* ===== CTA BAND ===== */
+  .cta-band{position:relative;height:100px;flex-shrink:0;background:var(--chip);display:flex;align-items:center;margin-top:auto}
+  .cta-dark{position:absolute;top:0;left:0;height:100%;width:60%;background:var(--brand);
+    clip-path:polygon(0 0,100% 0,calc(100% - 42px) 100%,0 100%);display:flex;align-items:center;padding-left:50px}
+  .cta-dark svg{width:32px;height:32px;color:#fff;opacity:.95;margin-right:18px;flex-shrink:0}
+  .cta-dark .l1{font-family:Montserrat,sans-serif;font-weight:700;font-size:21px;color:#fff}
+  .cta-dark .l2{font-style:italic;font-size:16px;color:#e8f7f3;margin-top:3px}
+  .cta-light{position:absolute;top:0;right:0;height:100%;width:40%;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;padding-left:28px}
+  .cta-light .l1{font-family:Montserrat,sans-serif;font-weight:800;font-size:21px;letter-spacing:.5px;color:var(--brand-deep)}
+  .cta-light .l2{font-size:16px;color:#3f6f64;margin-top:4px}
+
+  /* ===== CONTACT ===== */
+  .contact{padding:20px 34px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-shrink:0}
+  /* Bottom logo = brand wordmark in Zilla Slab (matches the supplied logo asset). */
+  .wordmark{flex-shrink:0;text-align:center;line-height:.92;font-family:'Zilla Slab',serif}
+  .wordmark .w1{font-weight:700;font-size:48px;letter-spacing:1.5px;color:var(--brand)}
+  .wordmark .w2{font-weight:600;font-size:21px;letter-spacing:1px;color:var(--accent);margin-top:2px}
+  .wordmark .w3{font-weight:600;font-size:14px;letter-spacing:6.5px;color:var(--brand);margin-top:3px;padding-left:6px}
+  /* Contacts in a 2×2 grid */
+  .details{display:grid;grid-template-columns:auto auto;gap:14px 30px;align-items:center}
+  .detail{display:flex;align-items:center;gap:11px}
+  .detail .chip{width:38px;height:38px;border-radius:50%;background:var(--chip);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .detail .chip svg{width:20px;height:20px;color:var(--brand)}
+  .detail .t-strong{font-size:17px;font-weight:700;color:var(--text)}
+  .detail .t-muted{font-size:14px;color:#4b5b5f;line-height:1.3}
+  .detail .t-med{font-size:15px;font-weight:600;color:var(--text)}
+  .qr-wrap{display:flex;align-items:center;gap:10px;flex-shrink:0}
+  .qr-prompt{font-family:Montserrat,sans-serif;font-weight:700;font-size:14px;line-height:1.2;color:var(--brand);text-align:right}
+  .qr-box{width:92px;height:92px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--border);box-shadow:var(--shadow);padding:7px}
+  .qr-box svg{width:78px;height:78px;display:block}
+
+  /* ===== PRINT: fit the A4-proportioned canvas onto one A4 sheet with safe printer margins ===== */
+  @media print{
+    @page{size:A4 portrait;margin:9mm}
+    html,body{margin:0;padding:0;background:#fff}
+    /* 210mm − 2×9mm = 192mm printable width; zoom shrinks the layout box (no stray 2nd page). */
+    .flyer{margin:0;zoom:.7244;box-shadow:none}
+  }
+</style>
+</head>
+<body>
+<div class="flyer">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <img class="hero-photo" src="magrex-device.jpg" alt="MAG REX 7.5T uređaj u ordinaciji Fizio Professional Zlatibor">
+    <div class="hero-fade"></div>
+    <div class="hero-inner">
+      <div class="brandrow">
+        <img class="logo" src="../assets/logo.png" alt="Fizio Professional Zlatibor">
+        <div class="brandtext">
+          <div class="tagline">VAŠ PARTNER ZA<br>ZDRAVLJE I POKRET</div>
+          <div class="eyebrow">REVOLUCIJA U<br>NEINVAZIVNOM LEČENJU</div>
+        </div>
+      </div>
+      <h1>INKONTINENCIJE<br>I&nbsp;OSLABLJENIH<br>KARLIČNIH MIŠIĆA</h1>
+      <div class="rule"></div>
+
+      <p>MAG REX je neinvazivan, bezbolan i efikasan tretman za jačanje karličnog dna pomoću fokusirane visoko‑intenzivne elektromagnetne energije.</p>
+      <p><strong>Jedna procedura = hiljade supramaksimalnih kontrakcija</strong> koje jačaju mišiće karličnog dna.</p>
+    </div>
+  </section>
+
+  <!-- ===================== KOME JE NAMENJEN ===================== -->
+  <section class="who">
+    <div class="who-col">
+      <h2 class="sec-label">KOME JE NAMENJEN?</h2>
+      <div class="checklist">
+        <div class="check"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.3 14.3-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4-7 7z"/></svg><div>Osobe svih uzrasta sa problemom nemogućnosti voljnog zadržavanja mokraće (urinarna&nbsp;<strong>inkontinencija</strong>)</div></div>
+        <div class="check"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.3 14.3-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4-7 7z"/></svg><div>Oslabljeni mišići karličnog dna nakon porođaja ili u menopauzi</div></div>
+        <div class="check"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.3 14.3-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4-7 7z"/></svg><div><strong>Prolaps karličnih organa</strong> (blagi i umeren stepen)</div></div>
+        <div class="check"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.3 14.3-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4-7 7z"/></svg><div><strong>Smanjena seksualna funkcija</strong> i zadovoljstvo</div></div>
+        <div class="check"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.3 14.3-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4-7 7z"/></svg><div>Rehabilitacija nakon <strong>ginekoloških operacija</strong></div></div>
+        <div class="check"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.3 14.3-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4-7 7z"/></svg><div>Prevencija i <strong>unapređenje zdravlja</strong> karličnog dna</div></div>
+      </div>
+    </div>
+    <div class="badge">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.4c-1.3 1.5-2 3-2 4.6 0 1 .3 1.9.8 2.8-1.1-.9-2.5-1.4-4.1-1.5-1.6-.1-2.8.2-3.7.9.9 3.2 4.3 5.6 9 5.6s8.1-2.4 9-5.6c-.9-.7-2.1-1-3.7-.9-1.6.1-3 .6-4.1 1.5.5-.9.8-1.8.8-2.8 0-1.6-.7-3.1-2-4.6z"/><path d="M5 17.5c1.8 1.6 4.3 2.5 7 2.5s5.2-.9 7-2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <div>BEZBOLNO<br>BEZ DOWNTIME‑A<br>BEZ OPERACIJE<br>BEZ LEKOVA</div>
+    </div>
+  </section>
+
+  <!-- ===================== ŠTA MOŽE ===================== -->
+  <section class="can">
+    <h2>ŠTA MOŽE <span>MAG REX</span>?</h2>
+    <div class="benefits">
+      <div class="benefit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6.5 6.5v11M3.5 9v5M17.5 6.5v11M20.5 9v5M6.5 12h11"/></svg>
+        <div>JAČA KARLIČNE<br>MIŠIĆE</div>
+      </div>
+      <div class="benefit">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3s6.5 6.6 6.5 10.8A6.5 6.5 0 1 1 5.5 13.8C5.5 9.6 12 3 12 3z"/></svg>
+        <div>SMANJUJE<br>INKONTINENCIJU</div>
+      </div>
+      <div class="benefit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12.5h4l2-5 3.5 10 2.5-6 1.5 3h5.5"/></svg>
+        <div>POBOLJŠAVA<br>KVALITET ŽIVOTA</div>
+      </div>
+      <div class="benefit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r="1.1" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="1.1" fill="currentColor" stroke="none"/><path d="M8 14a5 5 0 0 0 8 0" stroke-linecap="round"/></svg>
+        <div>POVEĆAVA<br>SAMOPOUZDANJE</div>
+      </div>
+      <div class="benefit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="5.2"/><path d="M12 13.2V21M8.6 17.6h6.8"/></svg>
+        <div>UNAPREĐUJE<br>INTIMNO ZADOVOLJSTVO</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA BAND ===================== -->
+  <section class="cta-band">
+    <div class="cta-dark">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.2-4.6-9.6-9.2C.9 8.7 2.5 5.3 6 5.3c2.1 0 3.3 1.2 4 2.4.7-1.2 1.9-2.4 4-2.4 3.5 0 5.1 3.4 3.6 6.5C19.2 16.4 12 21 12 21z"/></svg>
+      <div>
+        <div class="l1">Zašto trpeti, kada rešenje postoji?</div>
+        <div class="l2">Povratite kontrolu. Povratite sebe.</div>
+      </div>
+    </div>
+    <div class="cta-light">
+      <div class="l1">ZAKAŽITE SVOJ TERMIN!</div>
+      <div class="l2">Vaše zdravlje je na prvom mestu.</div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact">
+    <div class="wordmark">
+      <div class="w1">FIZIO</div>
+      <div class="w2">PROFESSIONAL</div>
+      <div class="w3">ZLATIBOR</div>
+    </div>
+
+    <div class="details">
+      <div class="detail">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z"/></svg></span>
+        <span class="t-strong">065/933‑1‑733</span>
+      </div>
+      <div class="detail">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
+        <span class="t-muted">Ulica Sportova 24B, 31315 Zlatibor<br>(Dvorana TRK na Zlatiboru)</span>
+      </div>
+      <div class="detail">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="3.8" ry="9"/><path d="M3 12h18" stroke-linecap="round"/></svg></span>
+        <span class="t-med">www.fizioprofessional.com</span>
+      </div>
+      <div class="detail">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/></svg></span>
+        <span class="t-med">@fizio_professional</span>
+      </div>
+    </div>
+
+    <div class="qr-wrap">
+      <div class="qr-prompt">Skeniraj<br>za više</div>
+      <div class="qr-box">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 330" class="segno"><path transform="scale(10)" class="qrline" stroke="#15706a" d="M0 0.5h7m1 0h3m1 0h2m1 0h6m1 0h2m2 0h7m-33 1h1m5 0h1m2 0h4m1 0h2m1 0h1m2 0h2m4 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m3 0h1m1 0h4m1 0h2m2 0h3m2 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m5 0h1m1 0h2m3 0h1m2 0h3m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h2m2 0h1m1 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h1m1 0h1m1 0h2m2 0h2m3 0h1m2 0h1m1 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-24 1h1m2 0h4m5 0h1m-21 1h7m4 0h2m3 0h1m4 0h1m1 0h1m2 0h2m3 0h1m-32 1h2m2 0h1m3 0h2m4 0h1m2 0h6m2 0h2m1 0h2m1 0h1m-33 1h1m1 0h5m1 0h5m1 0h3m1 0h1m1 0h1m4 0h2m1 0h1m1 0h1m-28 1h1m1 0h1m2 0h2m1 0h4m1 0h1m2 0h1m1 0h2m1 0h2m2 0h3m-31 1h3m1 0h5m1 0h1m3 0h3m1 0h1m4 0h1m1 0h1m1 0h3m1 0h2m-32 1h1m1 0h3m3 0h2m3 0h1m1 0h2m3 0h1m1 0h1m2 0h1m2 0h1m1 0h2m-32 1h1m3 0h2m1 0h8m9 0h2m1 0h1m2 0h1m-32 1h1m1 0h1m2 0h1m1 0h2m4 0h1m1 0h2m1 0h1m1 0h2m3 0h2m1 0h3m-28 1h5m2 0h2m4 0h1m1 0h3m1 0h1m1 0h2m1 0h2m3 0h1m-26 1h2m2 0h2m4 0h4m2 0h1m2 0h2m1 0h2m1 0h1m-33 1h3m2 0h2m5 0h5m1 0h1m1 0h1m1 0h1m1 0h1m2 0h2m1 0h2m-30 1h4m1 0h1m1 0h1m3 0h3m1 0h1m1 0h1m1 0h1m1 0h3m1 0h5m-32 1h3m3 0h2m1 0h1m2 0h2m1 0h3m4 0h4m1 0h3m-30 1h1m1 0h2m4 0h3m2 0h2m2 0h1m1 0h2m2 0h1m2 0h2m2 0h1m1 0h1m-33 1h1m1 0h2m2 0h1m1 0h1m1 0h1m1 0h1m3 0h1m3 0h1m1 0h1m1 0h2m3 0h1m1 0h1m-32 1h1m1 0h3m2 0h1m1 0h1m3 0h1m6 0h4m2 0h1m1 0h5m-33 1h1m2 0h1m1 0h5m1 0h1m2 0h1m2 0h4m1 0h7m3 0h1m-25 1h3m1 0h1m1 0h3m2 0h2m2 0h2m3 0h1m1 0h1m1 0h1m-33 1h7m1 0h1m4 0h4m3 0h2m1 0h2m1 0h1m1 0h1m1 0h2m-32 1h1m5 0h1m1 0h4m2 0h4m2 0h2m1 0h2m3 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h2m1 0h1m4 0h1m1 0h6m1 0h2m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h1m2 0h10m2 0h2m2 0h1m-33 1h1m1 0h3m1 0h1m1 0h2m2 0h2m1 0h1m1 0h2m3 0h1m3 0h2m1 0h1m-30 1h1m5 0h1m1 0h1m1 0h5m1 0h3m1 0h2m3 0h1m2 0h3m-31 1h7m6 0h1m1 0h1m2 0h1m3 0h6m3 0h1"/></svg>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
