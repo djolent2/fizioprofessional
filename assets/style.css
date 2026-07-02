@@ -46,3 +46,8 @@ body.with-bg footer{background:transparent;border-top-color:rgba(231,239,240,.7)
 /* Muted section leads and the About column sit directly on the photo backdrop — lift their legibility */
 body.with-bg main:not(.hero)>p.muted,body.with-bg section>.container>p.muted{color:#4b5b5f;text-shadow:0 1px 2px rgba(255,255,255,.95),0 0 12px rgba(255,255,255,.7)}
 body.with-bg #about .container>div:first-child p,body.with-bg #about .container>div:first-child li{text-shadow:0 1px 2px rgba(255,255,255,.95),0 0 12px rgba(255,255,255,.7)}
+/* Working-hours card: brand emblem fills the empty right side; stacks centered on phones */
+.hours-card{display:flex;align-items:center;gap:16px}
+.hours-text{flex:1;min-width:0}
+.hours-logo{width:170px;max-width:38%;height:auto;flex-shrink:0;margin-right:6px}
+@media (max-width:560px){.hours-card{flex-direction:column}.hours-logo{width:150px;max-width:60%;margin:6px 0 0}}
