@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Mulish:wght@400;500;600;700;800&amp;family=Caveat:wght@600;700&amp;family=Zilla+Slab:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<script src="./image-slot.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+<style>
+  * { box-sizing: border-box; }
+</style>
+</helmet>
+<div style="width:1000px; margin:0 auto; background:#ffffff; font-family:'Mulish',sans-serif; color:#2C3A38; position:relative; overflow:hidden;">
+
+  <!-- ===================== HERO ===================== -->
+  <div style="position:relative; height:712px;">
+
+    <!-- Patient photo, bleeds to top-right corner -->
+    <image-slot id="fizio-patient-photo" fit="cover" shape="rect" src="magrex-device.jpg" placeholder="Foto: MAG REX uređaj" style="position: absolute; top: 121px; width: 427px; height: 642px; left: 573px"></image-slot>
+    <!-- soft fade so left text never collides with photo -->
+    <div style="position:absolute; top:0; right:430px; width:120px; height:712px; background:linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 92%); z-index:2;"></div>
+
+    <div style="position:relative; z-index:3; width:540px; padding:46px 0 0 50px;">
+
+      <!-- Logo -->
+      <img src="https://fizioprofessional.com/assets/logo.png" alt="Fizio Professional Zlatibor" style="height:160px; width:auto; max-width:440px; object-fit:contain; display:block; margin-left:-6px;">
+      <div style="margin-top:10px; font-size:15px; font-weight:700; letter-spacing:2.5px; color:#8FA09C;">VAŠ PARTNER ZA ZDRAVLJE I POKRET</div>
+
+      <!-- Headline -->
+      <div style="margin-top:26px; font-size:16px; font-weight:700; letter-spacing:2.5px; color:#00A39B;">REVOLUCIJA U NEINVAZIVNOM LEČENJU</div>
+      <h1 style="margin:14px 0 0 0; font-family:'Montserrat',sans-serif; font-weight:800; font-size:49px; line-height:1.05; letter-spacing:-0.5px; color:#0B6A60;">
+        INKONTINENCIJE<br>I&nbsp;OSLABLJENIH<br>KARLIČNIH MIŠIĆA
+      </h1>
+      <div style="width:84px; height:6px; border-radius:3px; background:#89CA7E; margin:22px 0 0 0;"></div>
+
+      <!-- Body -->
+      <p style="margin:22px 0 0 0; font-size:21px; line-height:1.5; color:#46544F; max-width:440px;">
+        MAG REX je neinvazivan, bezbolan i efikasan tretman za jačanje karličnog dna pomoću fokusirane visoko-intenzivne elektromagnetne energije.
+      </p>
+      <p style="margin:14px 0 0 0; font-size:21px; line-height:1.5; color:#46544F; max-width:440px;">
+        <strong style="color:#00A39B;">Jedna procedura = hiljade supramaksimalnih kontrakcija</strong> koje jačaju mišiće karličnog dna.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===================== ZA KOGA ===================== -->
+  <div style="position:relative; padding:8px 50px 40px 50px; display:flex; gap:30px; align-items:flex-start;">
+    <div style="flex:1;">
+      <h2 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:27px; letter-spacing:0.5px; color:#00A39B; margin:0 0 20px 0;">KOME JE NAMENJEN?</h2>
+      <div style="display:flex; flex-direction:column; gap:17px;">
+        <div style="display:flex; align-items:flex-start; gap:13px;"><i class="ph-fill ph-check-circle" style="font-size:26px; color:#89CA7E; flex-shrink:0; margin-top:2px;"></i><div style="font-size:21px; line-height:1.5; color:#46544F;">Osobe svih uzrasta sa problemom&nbsp;nemogućnosti voljnog zadržavanja mokraće (urinarna&nbsp;<strong style="color: rgb(44, 58, 56);">inkontinencija</strong>)</div></div>
+        <div style="display:flex; align-items:flex-start; gap:13px;"><i class="ph-fill ph-check-circle" style="font-size:26px; color:#89CA7E; flex-shrink:0; margin-top:2px;"></i><div style="font-size:21px; line-height:1.5; color:#46544F;">Oslabljeni mišići karličnog dna nakon porođaja ili u menopauzi</div></div>
+        <div style="display:flex; align-items:flex-start; gap:13px;"><i class="ph-fill ph-check-circle" style="font-size:26px; color:#89CA7E; flex-shrink:0; margin-top:2px;"></i><div style="font-size:21px; line-height:1.5; color:#46544F;"><strong style="color:#2C3A38;">Prolaps karličnih organa</strong> (blagi i umeren stepen)</div></div>
+        <div style="display:flex; align-items:flex-start; gap:13px;"><i class="ph-fill ph-check-circle" style="font-size:26px; color:#89CA7E; flex-shrink:0; margin-top:2px;"></i><div style="font-size:21px; line-height:1.5; color:#46544F;"><strong style="color:#2C3A38;">Smanjena seksualna funkcija</strong> i zadovoljstvo</div></div>
+        <div style="display:flex; align-items:flex-start; gap:13px;"><i class="ph-fill ph-check-circle" style="font-size:26px; color:#89CA7E; flex-shrink:0; margin-top:2px;"></i><div style="font-size:21px; line-height:1.5; color:#46544F;">Rehabilitacija nakon <strong style="color:#2C3A38;">ginekoloških operacija</strong></div></div>
+        <div style="display:flex; align-items:flex-start; gap:13px;"><i class="ph-fill ph-check-circle" style="font-size:26px; color:#89CA7E; flex-shrink:0; margin-top:2px;"></i><div style="font-size:21px; line-height:1.5; color:#46544F;">Prevencija i <strong style="color:#2C3A38;">unapređenje zdravlja</strong> karličnog dna</div></div>
+      </div>
+    </div>
+
+    <!-- Badge -->
+    <div style="flex-shrink:0; width:228px; height:228px; border-radius:50%; background:#EAF5F1; border:2px solid #BFE0D2; display:flex; flex-direction:column; align-items:center; justify-content:center; margin-top:14px;">
+      <i class="ph ph-flower-lotus" style="font-size:40px; color:#00A39B; margin-bottom:12px;"></i>
+      <div style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:18.5px; line-height:1.5; letter-spacing:1px; color:#0B6A60; text-align:center;">
+        BEZBOLNO<br>BEZ DOWNTIME-A<br>BEZ OPERACIJE<br>BEZ LEKOVA
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== ŠTA MOŽE ===================== -->
+  <div style="padding:6px 44px 30px 44px;">
+    <h2 style="text-align: center; font-family: 'Montserrat',sans-serif; font-weight: 800; font-size: 37px; letter-spacing: 0.5px; color: #2C3A38; margin: 0 0 26px 0">ŠTA MOŽE <span style="color:#00A39B;">MAG REX</span>?</h2>
+    <div style="display:flex;">
+      <div style="flex:1; text-align:center; padding:0 8px;"><i class="ph ph-barbell" style="font-size:39px; color:#00A39B;"></i><div style="margin-top:13px; font-size:17px; font-weight:700; letter-spacing:0.5px; line-height:1.4; color:#46544F;">JAČA KARLIČNE<br>MIŠIĆE</div></div>
+      <div style="flex:1; text-align:center; padding:0 8px; border-left:1px solid #E0EDE8;"><i class="ph ph-drop" style="font-size:39px; color:#00A39B;"></i><div style="margin-top:13px; font-size:17px; font-weight:700; letter-spacing:0.5px; line-height:1.4; color:#46544F;">SMANJUJE<br>INKONTINENCIJU</div></div>
+      <div style="flex:1; text-align:center; padding:0 8px; border-left:1px solid #E0EDE8;"><i class="ph ph-heartbeat" style="font-size:39px; color:#00A39B;"></i><div style="margin-top:13px; font-size:17px; font-weight:700; letter-spacing:0.5px; line-height:1.4; color:#46544F;">POBOLJŠAVA<br>KVALITET ŽIVOTA</div></div>
+      <div style="flex:1; text-align:center; padding:0 8px; border-left:1px solid #E0EDE8;"><i class="ph ph-smiley" style="font-size:39px; color:#00A39B;"></i><div style="margin-top:13px; font-size:17px; font-weight:700; letter-spacing:0.5px; line-height:1.4; color:#46544F;">POVEĆAVA<br>SAMOPOUZDANJE</div></div>
+      <div style="flex:1; text-align:center; padding:0 8px; border-left:1px solid #E0EDE8;"><i class="ph ph-gender-female" style="font-size:39px; color:#00A39B;"></i><div style="margin-top:13px; font-size:17px; font-weight:700; letter-spacing:0.5px; line-height:1.4; color:#46544F;">UNAPREĐUJE<br>INTIMNO ZADOVOLJSTVO</div></div>
+    </div>
+  </div>
+
+  <!-- ===================== CTA BAND ===================== -->
+  <div style="position:relative; height:118px; background:#D6EAD7; display:flex; align-items:center;">
+    <div style="position:absolute; top:0; left:0; height:100%; width:60%; background:#0E6F66; clip-path:polygon(0 0, 100% 0, calc(100% - 46px) 100%, 0 100%); display:flex; align-items:center; padding:0 0 0 50px;">
+      <i class="ph ph-heart" style="font-size:38px; color:#ffffff; opacity:0.92; margin-right:20px;"></i>
+      <div>
+        <div style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:23.5px; color:#ffffff;">Zašto trpeti, kada rešenje postoji?</div>
+        <div style="font-style:italic; font-size:19px; color:#BFE0D2; margin-top:4px;">Povratite kontrolu. Povratite sebe.</div>
+      </div>
+    </div>
+    <div style="position:absolute; top:0; right:0; height:100%; width:40%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding-left:30px;">
+      <div style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:24px; letter-spacing:0.5px; color:#0B6A60;">ZAKAŽITE SVOJ TERMIN!</div>
+      <div style="font-size:17.5px; color:#1F6A5C; margin-top:5px;">Vaše zdravlje je na prvom mestu.</div>
+    </div>
+  </div>
+
+  <!-- ===================== CONTACT ===================== -->
+  <div style="padding:34px 50px 40px 50px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+    <!-- Brand sign-off (wordmark) -->
+    <div style="flex-shrink:0; text-align:center; line-height:0.92;">
+      <div style="font-family:'Zilla Slab',serif; font-weight:700; font-size:50px; letter-spacing:1px; color:#00A39B;">FIZIO</div>
+      <div style="font-family:'Zilla Slab',serif; font-weight:600; font-size:23px; letter-spacing:0.5px; color:#89CA7E; margin-top:3px;">PROFESSIONAL</div>
+      <div style="font-family:'Zilla Slab',serif; font-weight:600; font-size:16px; letter-spacing:7px; color:#00A39B; margin-top:4px; padding-left:7px;">ZLATIBOR</div>
+    </div>
+
+    <!-- Contact details -->
+    <div style="display:flex; flex-direction:column; gap:13px;">
+      <div style="display:flex; align-items:center; gap:13px;"><span style="width:42px; height:42px; border-radius:50%; background:#EAF5F1; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="ph-bold ph-phone" style="font-size:21px; color:#00A39B;"></i></span><span style="font-size:19.5px; font-weight:700; color:#2C3A38;">065/933-1-733</span></div>
+      <div style="display:flex; align-items:center; gap:13px;"><span style="width:42px; height:42px; border-radius:50%; background:#EAF5F1; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="ph-bold ph-map-pin" style="font-size:21px; color:#00A39B;"></i></span><span style="font-size:17.5px; color:#46544F; line-height:1.35;">Ulica Sportova 24B, 31315 Zlatibor<br>(Dvorana TRK na Zlatiboru)</span></div>
+      <div style="display:flex; align-items:center; gap:13px;"><span style="width:42px; height:42px; border-radius:50%; background:#EAF5F1; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="ph-bold ph-globe" style="font-size:21px; color:#00A39B;"></i></span><span style="font-size:18.5px; font-weight:600; color:#2C3A38;">www.fizioprofessional.com</span></div>
+      <div style="display:flex; align-items:center; gap:13px;"><span style="width:42px; height:42px; border-radius:50%; background:#EAF5F1; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="ph-bold ph-instagram-logo" style="font-size:21px; color:#00A39B;"></i></span><span style="font-size:18.5px; font-weight:600; color:#2C3A38;">@fizio_professional</span></div>
+    </div>
+
+    <!-- Scan + QR -->
+    <div style="display:flex; align-items:center; gap:14px; flex-shrink:0;">
+      <div style="font-family:'Caveat',cursive; font-weight:700; font-size:25.5px; line-height:1.15; color:#00A39B; text-align:right;">Skeniraj i saznaj<br>više o tretmanu!</div>
+      <i class="ph-bold ph-arrow-elbow-down-right" style="font-size:24px; color:#89CA7E;"></i>
+      <div id="fizio-qr" style="width:96px; height:96px; border-radius:10px; background:#ffffff; display:flex; align-items:center; justify-content:center; border:1px solid #D8E8E2; overflow:hidden;"></div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1000,&quot;height&quot;:1500}}">class Component extends DCLogic {
+  componentDidMount() { this._renderQR(); }
+  componentDidUpdate() { this._renderQR(); }
+  _renderQR() {
+    const url = 'https://fizioprofessional.com/magnetic.html';
+    const tryRender = (tries) => {
+      const el = document.getElementById('fizio-qr');
+      if (!el) return;
+      if (el.getAttribute('data-qr') === url) return;
+      if (typeof window.QRCode === 'undefined') {
+        if (tries < 80) setTimeout(() => tryRender(tries + 1), 150);
+        return;
+      }
+      el.innerHTML = '';
+      new window.QRCode(el, {
+        text: url,
+        width: 86,
+        height: 86,
+        colorDark: '#0F5E5C',
+        colorLight: '#ffffff',
+        correctLevel: window.QRCode.CorrectLevel.M
+      });
+      el.setAttribute('data-qr', url);
+    };
+    tryRender(0);
+  }
+}</script>
+</body>
+</html>
