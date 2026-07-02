@@ -1,7 +1,13 @@
 
 (function(){
+  // Strings shared by every page (nav, footer, back-link). A page's own DICT can override any of them.
+  const COMMON={
+    sr:{"nav.services":"Usluge","nav.about":"O nama","nav.gallery":"Galerija","nav.contact":"Kontakt","nav.book":"Zakazivanje","back":"← Nazad na usluge","footer.top":"Na vrh ↑"},
+    en:{"nav.services":"Services","nav.about":"About","nav.gallery":"Gallery","nav.contact":"Contact","nav.book":"Book","back":"← Back to services","footer.top":"Back to top ↑"}
+  };
   function applyLang(lang){
-    const d=(window.DICT&&window.DICT[lang])||(window.DICT&&window.DICT['sr'])||{};
+    const page=(window.DICT&&(window.DICT[lang]||window.DICT['sr']))||{};
+    const d=Object.assign({},COMMON[lang]||COMMON['sr'],page);
     document.documentElement.lang=lang;
     document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n; if(d[k]) el.textContent=d[k];});
     document.getElementById('btn-sr')?.classList.toggle('active',lang==='sr');
