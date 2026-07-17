@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=3">
+  <link rel="stylesheet" href="assets/style.css?v=4">
   <link rel="canonical" href="https://fizioprofessional.com/">
   <script type="application/ld+json">
 {
@@ -94,6 +94,44 @@
       </nav>
     </div>
   </header>
+
+  <!-- Rotating news banner -->
+  <div class="news-bar" id="news-bar" role="region" aria-label="Novosti">
+    <div class="container news-inner">
+      <span class="news-chip" data-i18n="news.chip">NOVOSTI</span>
+      <div class="news-track">
+        <a class="news-item is-active" href="insoles.html">
+          <img src="images/news/news-insoles.jpg" alt="" width="160" height="160">
+          <span class="news-text">
+            <strong data-i18n="news.n1.t">NOVO: Ortopedski ulošci po meri</strong>
+            <span class="news-desc muted" data-i18n="news.n1.d">Kompjuterska analiza stopala + ulošci rađeni tačno po vašem stopalu — za decu i odrasle.</span>
+          </span>
+          <span class="news-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="news-item" href="magnetic.html#karlicno-dno">
+          <img src="images/news/news-magrex.jpg" alt="" width="160" height="160">
+          <span class="news-text">
+            <strong data-i18n="news.n2.t">MAG REX program za karlično dno</strong>
+            <span class="news-desc muted" data-i18n="news.n2.d">Magnetna terapija protiv inkontinencije — bez operacije, bez lekova, u odeći.</span>
+          </span>
+          <span class="news-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="news-item" href="traction.html">
+          <img src="images/news/news-traction.jpg" alt="" width="160" height="160">
+          <span class="news-text">
+            <strong data-i18n="news.n3.t">Trakciona terapija — sjajna stvar za vaša leđa</strong>
+            <span class="news-desc muted" data-i18n="news.n3.d">Nežno mašinsko istezanje kičme rasterećuje disk i nerv (Triton 6M).</span>
+          </span>
+          <span class="news-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="news-dots">
+        <button class="news-dot is-active" type="button" aria-label="Vest 1"></button>
+        <button class="news-dot" type="button" aria-label="Vest 2"></button>
+        <button class="news-dot" type="button" aria-label="Vest 3"></button>
+      </div>
+    </div>
+  </div>
 
   <main id="home" class="hero">
     <div class="container hero-inner">
@@ -201,6 +239,13 @@
           <img width="316" height="210" class="thumb" src="images/cards/kinesitherapy.jpg" alt="Kineziterapija" loading="lazy"/>
           <p class="muted" data-i18n="svcdesc.kinesitherapy">Vođene vežbe uz terapeuta — vraćaju snagu, pokretljivost i sigurnost posle povrede, operacije ili dugog mirovanja.</p>
           <p><a class="cta" href="kinesitherapy.html" data-i18n="more">Saznaj više →</a></p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="svc.insoles">Ortopedski ulošci po meri</h3>
+          <img width="478" height="425" class="thumb" src="images/cards/insoles.jpg" alt="Ortopedski ulošci po meri" loading="lazy"/>
+          <p class="muted" data-i18n="svcdesc.insoles">Peta, svod ili leđa? Kompjuterska analiza stopala i ulošci rađeni tačno po vašoj nozi — za decu i odrasle.</p>
+          <p><a class="cta" href="insoles.html" data-i18n="more">Saznaj više →</a></p>
         </article>
 
         <article class="card">
@@ -335,6 +380,7 @@
         "svc.cupping":"Vakuum terapija (cupping)",
         "svc.kinesitherapy":"Kineziterapija",
         "svc.pro-services":"Profesionalne usluge (sport)",
+        "svc.insoles":"Ortopedski ulošci po meri",
 
         "svcdesc.electrotherapy":"Bol, otok ili oslabljen mišić? Terapeutske struje (TENS, NMES) smiruju bol i „bude\" mišiće — bez lekova.",
         "svcdesc.magnetic":"Dubinski bol u zglobu, leđima ili peti? Magnetno polje deluje kroz odeću, bez dodira — uz poseban program za karlično dno i inkontinenciju.",
@@ -348,7 +394,12 @@
         "svcdesc.taping":"Elastične trake koje podržavaju mišić i zglob u pokretu — trče, plivaju i rade sa vama do 5 dana.",
         "svcdesc.cupping":"Vakuum čašice opuštaju stegnuta leđa i tvrdokorne čvorove (trigger tačke) — duboko olakšanje bez jakog pritiska.",
         "svcdesc.kinesitherapy":"Vođene vežbe uz terapeuta — vraćaju snagu, pokretljivost i sigurnost posle povrede, operacije ili dugog mirovanja.",
-        "svcdesc.pro-services":"Fizioterapeut na vašem terenu: pokrivamo treninge, utakmice i turnire — licencirani tim i prenosiva oprema."
+        "svcdesc.pro-services":"Fizioterapeut na vašem terenu: pokrivamo treninge, utakmice i turnire — licencirani tim i prenosiva oprema.",
+        "svcdesc.insoles":"Peta, svod ili leđa? Kompjuterska analiza stopala i ulošci rađeni tačno po vašoj nozi — za decu i odrasle.",
+        "news.chip":"NOVOSTI",
+        "news.n1.t":"NOVO: Ortopedski ulošci po meri","news.n1.d":"Kompjuterska analiza stopala + ulošci rađeni tačno po vašem stopalu — za decu i odrasle.",
+        "news.n2.t":"MAG REX program za karlično dno","news.n2.d":"Magnetna terapija protiv inkontinencije — bez operacije, bez lekova, u odeći.",
+        "news.n3.t":"Trakciona terapija — sjajna stvar za vaša leđa","news.n3.d":"Nežno mašinsko istezanje kičme rasterećuje disk i nerv (Triton 6M)."
       },
       en: {
         
@@ -380,6 +431,7 @@
         "svc.cupping":"Cupping",
         "svc.kinesitherapy":"Kinesitherapy",
         "svc.pro-services":"Professional Services",
+        "svc.insoles":"Custom Orthopedic Insoles",
 
         "svcdesc.electrotherapy":"Pain, swelling or a weakened muscle? Therapeutic currents (TENS, NMES) calm pain and „wake up\" muscles — no medication.",
         "svcdesc.magnetic":"Deep pain in a joint, back or heel? The magnetic field works through clothing, no contact — plus a dedicated pelvic-floor and incontinence programme.",
@@ -393,9 +445,36 @@
         "svcdesc.taping":"Elastic tape that supports muscle and joint in motion — it runs, swims and works with you for up to 5 days.",
         "svcdesc.cupping":"Vacuum cups release a tight back and stubborn knots (trigger points) — deep relief without heavy pressure.",
         "svcdesc.kinesitherapy":"Guided exercise with your therapist — restoring strength, mobility and confidence after injury, surgery or a long break.",
-        "svcdesc.pro-services":"A physiotherapist at your venue: we cover training, matches and tournaments — licensed staff and portable equipment."
+        "svcdesc.pro-services":"A physiotherapist at your venue: we cover training, matches and tournaments — licensed staff and portable equipment.",
+        "svcdesc.insoles":"Heel, arch or back pain? Computerised foot analysis and insoles made precisely for your feet — kids and adults.",
+        "news.chip":"NEWS",
+        "news.n1.t":"NEW: Custom orthopedic insoles","news.n1.d":"Computerised foot analysis + insoles made precisely for your feet — kids and adults.",
+        "news.n2.t":"MAG REX pelvic-floor programme","news.n2.d":"Magnetic therapy for incontinence — no surgery, no medication, fully dressed.",
+        "news.n3.t":"Traction therapy — great for your back","news.n3.d":"Gentle machine decompression unloads discs and nerves (Triton 6M)."
       }
     };
+  </script>
+  <script>
+    // News banner rotation: auto-advance, pause on hover/focus, dots, reduced-motion aware
+    (function(){
+      const bar=document.getElementById('news-bar'); if(!bar) return;
+      const items=Array.from(bar.querySelectorAll('.news-item'));
+      const dots=Array.from(bar.querySelectorAll('.news-dot'));
+      let i=0, t=null;
+      function show(n){
+        i=(n+items.length)%items.length;
+        items.forEach((el,k)=>el.classList.toggle('is-active',k===i));
+        dots.forEach((el,k)=>el.classList.toggle('is-active',k===i));
+      }
+      function start(){ if(t||matchMedia('(prefers-reduced-motion: reduce)').matches) return; t=setInterval(()=>show(i+1),6500); }
+      function stop(){ clearInterval(t); t=null; }
+      dots.forEach((d,k)=>d.addEventListener('click',()=>{stop(); show(k); start();}));
+      bar.addEventListener('mouseenter',stop);
+      bar.addEventListener('mouseleave',start);
+      bar.addEventListener('focusin',stop);
+      bar.addEventListener('focusout',start);
+      start();
+    })();
   </script>
   <script src="assets/i18n.js"></script>
   <!-- Cloudflare Web Analytics -->
