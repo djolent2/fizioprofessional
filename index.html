@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=4">
+  <link rel="stylesheet" href="assets/style.css?v=5">
   <link rel="canonical" href="https://fizioprofessional.com/">
   <script type="application/ld+json">
 {
@@ -75,18 +75,18 @@
 <body class="with-bg">
   <header>
     <div class="container nav">
-      <a href="index.html#home" class="logo" aria-label="Fizio Professional Zlatibor – home">
+      <a href="index.html#home" class="logo" aria-label="Fizio Professional Zlatibor – početna" data-i18n-aria="aria.home">
         <img width="1404" height="1362" src="assets/logo.png" alt="Fizio Professional Zlatibor logo" />
       </a>
       <nav>
-        <button class="hamb" aria-label="Open menu" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
-        <div class="menu">
+        <button class="hamb" aria-label="Otvori meni" data-i18n-aria="aria.menu" aria-controls="site-menu" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
+        <div class="menu" id="site-menu">
           <a href="index.html#services" data-i18n="nav.services">Usluge</a>
           <a href="index.html#about" data-i18n="nav.about">O nama</a>
           <a href="gallery.html" data-i18n="nav.gallery">Galerija</a>
           <a href="index.html#contact" data-i18n="nav.contact">Kontakt</a>
           <a href="index.html#booking" class="cta" data-i18n="nav.book">Zakazivanje</a>
-          <div class="lang" aria-label="language switcher">
+          <div class="lang" role="group" aria-label="Izbor jezika" data-i18n-aria="aria.lang">
             <button id="btn-sr" class="active" type="button">SR</button>
             <button id="btn-en" type="button">EN</button>
           </div>
@@ -96,7 +96,7 @@
   </header>
 
   <!-- Rotating news banner -->
-  <div class="news-bar" id="news-bar" role="region" aria-label="Novosti">
+  <div class="news-bar" id="news-bar" role="region" aria-label="Novosti" data-i18n-aria="aria.news">
     <div class="container news-inner">
       <span class="news-chip" data-i18n="news.chip">NOVOSTI</span>
       <div class="news-track">
@@ -126,9 +126,10 @@
         </a>
       </div>
       <div class="news-dots">
-        <button class="news-dot is-active" type="button" aria-label="Vest 1"></button>
-        <button class="news-dot" type="button" aria-label="Vest 2"></button>
-        <button class="news-dot" type="button" aria-label="Vest 3"></button>
+        <button class="news-dot is-active" type="button" aria-label="Vest 1" data-i18n-aria="aria.dot1" aria-current="true"></button>
+        <button class="news-dot" type="button" aria-label="Vest 2" data-i18n-aria="aria.dot2"></button>
+        <button class="news-dot" type="button" aria-label="Vest 3" data-i18n-aria="aria.dot3"></button>
+        <button class="news-dot news-pause" type="button" aria-pressed="false" aria-label="Pauziraj rotaciju" data-i18n-aria="aria.pause">⏸</button>
       </div>
     </div>
   </div>
@@ -397,6 +398,7 @@
         "svcdesc.pro-services":"Fizioterapeut na vašem terenu: pokrivamo treninge, utakmice i turnire — licencirani tim i prenosiva oprema.",
         "svcdesc.insoles":"Peta, svod ili leđa? Kompjuterska analiza stopala i ulošci rađeni tačno po vašoj nozi — za decu i odrasle.",
         "news.chip":"NOVOSTI",
+        "aria.news":"Novosti","aria.dot1":"Vest 1","aria.dot2":"Vest 2","aria.dot3":"Vest 3","aria.pause":"Pauziraj rotaciju",
         "news.n1.t":"NOVO: Ortopedski ulošci po meri","news.n1.d":"Kompjuterska analiza stopala + ulošci rađeni tačno po vašem stopalu — za decu i odrasle.",
         "news.n2.t":"MAG REX program za karlično dno","news.n2.d":"Magnetna terapija protiv inkontinencije — bez operacije, bez lekova, u odeći.",
         "news.n3.t":"Trakciona terapija — sjajna stvar za vaša leđa","news.n3.d":"Nežno mašinsko istezanje kičme rasterećuje disk i nerv (Triton 6M)."
@@ -448,6 +450,7 @@
         "svcdesc.pro-services":"A physiotherapist at your venue: we cover training, matches and tournaments — licensed staff and portable equipment.",
         "svcdesc.insoles":"Heel, arch or back pain? Computerised foot analysis and insoles made precisely for your feet — kids and adults.",
         "news.chip":"NEWS",
+        "aria.news":"News","aria.dot1":"News item 1","aria.dot2":"News item 2","aria.dot3":"News item 3","aria.pause":"Pause rotation",
         "news.n1.t":"NEW: Custom orthopedic insoles","news.n1.d":"Computerised foot analysis + insoles made precisely for your feet — kids and adults.",
         "news.n2.t":"MAG REX pelvic-floor programme","news.n2.d":"Magnetic therapy for incontinence — no surgery, no medication, fully dressed.",
         "news.n3.t":"Traction therapy — great for your back","news.n3.d":"Gentle machine decompression unloads discs and nerves (Triton 6M)."
@@ -455,24 +458,31 @@
     };
   </script>
   <script>
-    // News banner rotation: auto-advance, pause on hover/focus, dots, reduced-motion aware
+    // News banner rotation: auto-advance, pause on hover/focus, dots, user stop button, reduced-motion aware
     (function(){
       const bar=document.getElementById('news-bar'); if(!bar) return;
       const items=Array.from(bar.querySelectorAll('.news-item'));
-      const dots=Array.from(bar.querySelectorAll('.news-dot'));
-      let i=0, t=null;
+      const dots=Array.from(bar.querySelectorAll('.news-dot:not(.news-pause)'));
+      const pauseBtn=bar.querySelector('.news-pause');
+      let i=0, t=null, paused=false, userStopped=false;
       function show(n){
         i=(n+items.length)%items.length;
         items.forEach((el,k)=>el.classList.toggle('is-active',k===i));
-        dots.forEach((el,k)=>el.classList.toggle('is-active',k===i));
+        dots.forEach((el,k)=>{el.classList.toggle('is-active',k===i); if(k===i){el.setAttribute('aria-current','true');}else{el.removeAttribute('aria-current');}});
       }
-      function start(){ if(t||matchMedia('(prefers-reduced-motion: reduce)').matches) return; t=setInterval(()=>show(i+1),6500); }
+      function start(){ if(paused||userStopped||t||matchMedia('(prefers-reduced-motion: reduce)').matches) return; t=setInterval(()=>show(i+1),6500); }
       function stop(){ clearInterval(t); t=null; }
       dots.forEach((d,k)=>d.addEventListener('click',()=>{stop(); show(k); start();}));
-      bar.addEventListener('mouseenter',stop);
-      bar.addEventListener('mouseleave',start);
-      bar.addEventListener('focusin',stop);
-      bar.addEventListener('focusout',start);
+      if(pauseBtn) pauseBtn.addEventListener('click',()=>{
+        userStopped=!userStopped;
+        pauseBtn.setAttribute('aria-pressed',String(userStopped));
+        pauseBtn.textContent=userStopped?'▶':'⏸';
+        if(userStopped) stop(); else start();
+      });
+      bar.addEventListener('mouseenter',()=>{paused=true;stop();});
+      bar.addEventListener('mouseleave',()=>{paused=false;start();});
+      bar.addEventListener('focusin',()=>{paused=true;stop();});
+      bar.addEventListener('focusout',()=>{paused=false;start();});
       start();
     })();
   </script>

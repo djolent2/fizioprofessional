@@ -63,7 +63,10 @@ body.with-bg #about .container>div:first-child p,body.with-bg #about .container>
 .news-text strong{font-family:Montserrat,Inter,sans-serif;font-size:.98rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .news-desc{font-size:.85rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .news-arrow{color:var(--brand);font-weight:700;flex-shrink:0}
-.news-dots{display:flex;gap:7px;flex-shrink:0}
-.news-dot{width:9px;height:9px;border-radius:50%;border:2px solid var(--brand);background:#fff;padding:0;cursor:pointer}
-.news-dot.is-active{background:var(--brand)}
+.news-dots{display:flex;flex-shrink:0}
+.news-dot{width:24px;height:24px;border:0;background:transparent;padding:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.news-dot::before{content:"";width:9px;height:9px;border-radius:50%;border:2px solid var(--brand);background:#fff}
+.news-dot.is-active::before{background:var(--brand)}
+.news-pause{font-size:13px;line-height:1;color:var(--brand)}
+.news-pause::before{content:none}
 @media (max-width:700px){.news-desc{display:none}.news-chip{display:none}.news-inner{min-height:56px}}
