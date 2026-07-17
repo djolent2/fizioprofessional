@@ -2,3 +2,6 @@
 images/.DS_Store
 gallery/.DS_Store
 
+
+# Local-only working notes — must never deploy to GitHub Pages
+NOTES/
