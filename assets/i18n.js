@@ -2,16 +2,20 @@
 (function(){
   // Strings shared by every page (nav, footer, back-link). A page's own DICT can override any of them.
   const COMMON={
-    sr:{"nav.services":"Usluge","nav.about":"O nama","nav.gallery":"Galerija","nav.contact":"Kontakt","nav.book":"Zakazivanje","back":"← Nazad na usluge","footer.top":"Na vrh ↑"},
-    en:{"nav.services":"Services","nav.about":"About","nav.gallery":"Gallery","nav.contact":"Contact","nav.book":"Book","back":"← Back to services","footer.top":"Back to top ↑"}
+    sr:{"nav.services":"Usluge","nav.about":"O nama","nav.gallery":"Galerija","nav.contact":"Kontakt","nav.book":"Zakazivanje","back":"← Nazad na usluge","footer.top":"Na vrh ↑","aria.menu":"Otvori meni","aria.lang":"Izbor jezika","aria.home":"Fizio Professional Zlatibor – početna"},
+    en:{"nav.services":"Services","nav.about":"About","nav.gallery":"Gallery","nav.contact":"Contact","nav.book":"Book","back":"← Back to services","footer.top":"Back to top ↑","aria.menu":"Open menu","aria.lang":"Language","aria.home":"Fizio Professional Zlatibor – home"}
   };
   function applyLang(lang){
     const page=(window.DICT&&(window.DICT[lang]||window.DICT['sr']))||{};
     const d=Object.assign({},COMMON[lang]||COMMON['sr'],page);
     document.documentElement.lang=lang;
     document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n; if(d[k]) el.textContent=d[k];});
+    // Accessible names (aria-label) get translated too — mark elements with data-i18n-aria="key"
+    document.querySelectorAll('[data-i18n-aria]').forEach(el=>{const k=el.dataset.i18nAria; if(d[k]) el.setAttribute('aria-label',d[k]);});
     document.getElementById('btn-sr')?.classList.toggle('active',lang==='sr');
     document.getElementById('btn-en')?.classList.toggle('active',lang==='en');
+    document.getElementById('btn-sr')?.setAttribute('aria-pressed',String(lang==='sr'));
+    document.getElementById('btn-en')?.setAttribute('aria-pressed',String(lang==='en'));
     localStorage.setItem('lang',lang);
   }
   function detectLang(){
@@ -33,6 +37,10 @@
       hamb.setAttribute('aria-expanded','false');
       hamb.addEventListener('click',()=>hamb.setAttribute('aria-expanded',String(menu.classList.contains('open'))));
       menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');hamb.setAttribute('aria-expanded','false');}));
+      // Escape closes the overlay and returns focus; a tap outside the nav closes it too.
+      // closest('nav') keeps the hamburger toggle and the SR/EN buttons working as before.
+      document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('open')){menu.classList.remove('open');hamb.setAttribute('aria-expanded','false');hamb.focus();}});
+      document.addEventListener('click',e=>{if(menu.classList.contains('open')&&!e.target.closest('nav')){menu.classList.remove('open');hamb.setAttribute('aria-expanded','false');}});
     }
   });
 })();

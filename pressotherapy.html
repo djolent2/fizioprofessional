@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=4">
+  <link rel="stylesheet" href="assets/style.css?v=5">
   <link rel="canonical" href="https://fizioprofessional.com/pressotherapy.html">
   <meta property="og:title" content="Presoterapija — laganije noge i brži oporavak | Fizio Professional Zlatibor">
   <meta property="og:description" content="Drenaža, oporavak nogu, anti‑celulit, smanjenje otoka. Sequential Circulator SC‑2008‑DL.">
@@ -39,18 +39,18 @@
 <body class="with-bg">
   <header>
     <div class="container nav">
-      <a href="index.html#home" class="logo" aria-label="Fizio Professional Zlatibor – home">
+      <a href="index.html#home" class="logo" aria-label="Fizio Professional Zlatibor – početna" data-i18n-aria="aria.home">
         <img width="1404" height="1362" src="assets/logo.png" alt="Fizio Professional Zlatibor logo" />
       </a>
       <nav>
-        <button class="hamb" aria-label="Open menu" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
-        <div class="menu">
+        <button class="hamb" aria-label="Otvori meni" data-i18n-aria="aria.menu" aria-controls="site-menu" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
+        <div class="menu" id="site-menu">
           <a href="index.html#services" data-i18n="nav.services">Usluge</a>
           <a href="index.html#about" data-i18n="nav.about">O nama</a>
           <a href="gallery.html" data-i18n="nav.gallery">Galerija</a>
           <a href="index.html#contact" data-i18n="nav.contact">Kontakt</a>
           <a href="index.html#booking" class="cta" data-i18n="nav.book">Zakazivanje</a>
-          <div class="lang" aria-label="language switcher">
+          <div class="lang" role="group" aria-label="Izbor jezika" data-i18n-aria="aria.lang">
             <button id="btn-sr" class="active" type="button">SR</button>
             <button id="btn-en" type="button">EN</button>
           </div>
