@@ -5,6 +5,9 @@
     sr:{"nav.services":"Usluge","nav.about":"O nama","nav.gallery":"Galerija","nav.contact":"Kontakt","nav.book":"Zakazivanje","back":"← Nazad na usluge","footer.top":"Na vrh ↑","aria.menu":"Otvori meni","aria.lang":"Izbor jezika","aria.home":"Fizio Professional Zlatibor – početna"},
     en:{"nav.services":"Services","nav.about":"About","nav.gallery":"Gallery","nav.contact":"Contact","nav.book":"Book","back":"← Back to services","footer.top":"Back to top ↑","aria.menu":"Open menu","aria.lang":"Language","aria.home":"Fizio Professional Zlatibor – home"}
   };
+  // localStorage can throw (blocked cookies/site data, some webviews) — never let that kill init
+  function lsGet(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function lsSet(k,v){try{localStorage.setItem(k,v)}catch(e){}}
   function applyLang(lang){
     const page=(window.DICT&&(window.DICT[lang]||window.DICT['sr']))||{};
     const d=Object.assign({},COMMON[lang]||COMMON['sr'],page);
@@ -16,10 +19,10 @@
     document.getElementById('btn-en')?.classList.toggle('active',lang==='en');
     document.getElementById('btn-sr')?.setAttribute('aria-pressed',String(lang==='sr'));
     document.getElementById('btn-en')?.setAttribute('aria-pressed',String(lang==='en'));
-    localStorage.setItem('lang',lang);
+    lsSet('lang',lang);
   }
   function detectLang(){
-    const saved=localStorage.getItem('lang'); if(saved){applyLang(saved); return;}
+    const saved=lsGet('lang'); if(saved){applyLang(saved); return;}
     // Browser language beats geo-IP: tourists at Zlatibor get EN, Serbian speakers abroad get SR,
     // the choice is instant, and no visitor data leaves the page.
     const langs=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'en']).map(l=>String(l).toLowerCase());
@@ -27,7 +30,9 @@
     const isSr=langs.some(l=>srFamily.some(p=>l===p||l.startsWith(p+'-')));
     applyLang(isSr?'sr':'en');
   }
-  window.addEventListener('DOMContentLoaded', ()=>{
+  // Runs immediately: this is a classic script at the end of <body>, so the DOM is already parsed.
+  // (Waiting for DOMContentLoaded made the language swap wait on the deferred analytics beacon.)
+  function init(){
     document.getElementById('btn-sr')?.addEventListener('click',()=>applyLang('sr'));
     document.getElementById('btn-en')?.addEventListener('click',()=>applyLang('en'));
     detectLang(); const y=document.getElementById('y'); if(y) y.textContent=new Date().getFullYear();
@@ -42,5 +47,6 @@
       document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('open')){menu.classList.remove('open');hamb.setAttribute('aria-expanded','false');hamb.focus();}});
       document.addEventListener('click',e=>{if(menu.classList.contains('open')&&!e.target.closest('nav')){menu.classList.remove('open');hamb.setAttribute('aria-expanded','false');}});
     }
-  });
+  }
+  if(document.readyState==='loading') window.addEventListener('DOMContentLoaded',init); else init();
 })();
