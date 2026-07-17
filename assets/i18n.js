@@ -2,8 +2,8 @@
 (function(){
   // Strings shared by every page (nav, footer, back-link). A page's own DICT can override any of them.
   const COMMON={
-    sr:{"nav.services":"Usluge","nav.about":"O nama","nav.gallery":"Galerija","nav.contact":"Kontakt","nav.book":"Zakazivanje","back":"← Nazad na usluge","footer.top":"Na vrh ↑","aria.menu":"Otvori meni","aria.lang":"Izbor jezika","aria.home":"Fizio Professional Zlatibor – početna"},
-    en:{"nav.services":"Services","nav.about":"About","nav.gallery":"Gallery","nav.contact":"Contact","nav.book":"Book","back":"← Back to services","footer.top":"Back to top ↑","aria.menu":"Open menu","aria.lang":"Language","aria.home":"Fizio Professional Zlatibor – home"}
+    sr:{"nav.services":"Usluge","nav.about":"O nama","nav.gallery":"Galerija","nav.contact":"Kontakt","nav.book":"Zakazivanje","back":"← Nazad na usluge","footer.top":"Na vrh ↑","footer.privacy":"Politika privatnosti","aria.menu":"Otvori meni","aria.lang":"Izbor jezika","aria.home":"Fizio Professional Zlatibor – početna"},
+    en:{"nav.services":"Services","nav.about":"About","nav.gallery":"Gallery","nav.contact":"Contact","nav.book":"Book","back":"← Back to services","footer.top":"Back to top ↑","footer.privacy":"Privacy policy","aria.menu":"Open menu","aria.lang":"Language","aria.home":"Fizio Professional Zlatibor – home"}
   };
   // localStorage can throw (blocked cookies/site data, some webviews) — never let that kill init
   function lsGet(k){try{return localStorage.getItem(k)}catch(e){return null}}
